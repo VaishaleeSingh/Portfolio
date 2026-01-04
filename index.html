@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
-  <title>
-   Vaishalee Singh - Portfolio
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-  <style>
-   * {
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport" />
+    <title>
+        Vaishalee Singh - Portfolio
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -53,20 +54,37 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(52, 73, 94, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(45, 53, 97, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 20%, rgba(30, 42, 58, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(45, 53, 97, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(30, 42, 58, 0.1) 0%, transparent 50%);
             animation: pulse 20s ease-in-out infinite;
         }
 
         @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.1); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1);
+            }
         }
 
         /* Navigation */
@@ -259,6 +277,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -268,7 +287,7 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5), 0 0 20px rgba(255, 255, 255, 0.1);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.1);
             background: linear-gradient(135deg, #ffffff 0%, #e8eaf6 50%, #ffffff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -279,7 +298,7 @@
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.95;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.4), 0 0 10px rgba(255, 255, 255, 0.1);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 255, 255, 0.1);
             letter-spacing: 0.5px;
         }
 
@@ -347,7 +366,7 @@
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: white;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.4), 0 0 15px rgba(255, 255, 255, 0.1);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.1);
             position: relative;
             display: inline-block;
             width: 100%;
@@ -367,8 +386,17 @@
         }
 
         @keyframes shimmer {
-            0%, 100% { opacity: 0.4; width: 80px; }
-            50% { opacity: 0.7; width: 100px; }
+
+            0%,
+            100% {
+                opacity: 0.4;
+                width: 80px;
+            }
+
+            50% {
+                opacity: 0.7;
+                width: 100px;
+            }
         }
 
         /* About Section */
@@ -412,8 +440,13 @@
         }
 
         @keyframes gradientRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .profile-img:hover {
@@ -426,6 +459,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: 50% 25%;
             border-radius: 50%;
             transition: transform 0.3s ease;
         }
@@ -608,8 +642,13 @@
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .project-card:hover .project-header::before {
@@ -809,6 +848,7 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1198,6 +1238,7 @@
 
         /* Touch device optimizations */
         @media (hover: none) and (pointer: coarse) {
+
             .btn,
             .project-btn,
             .nav-links a {
@@ -1225,657 +1266,724 @@
             opacity: 1;
             transform: translateY(0);
         }
-  </style>
- </head>
- <body>
-  <div class="bg-animation">
-  </div>
-  <nav>
-   <div class="nav-container">
-    <div class="logo" onclick="scrollToTop()">
-     <span>
-      V
-     </span>
-     <span>
-      S
-     </span>
+    </style>
+</head>
+
+<body>
+    <div class="bg-animation">
     </div>
-    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-     <i class="fas fa-bars">
-     </i>
-    </button>
-    <ul class="nav-links" id="navLinks">
-     <li>
-      <a href="#home" onclick="closeMobileMenu()">
-       <i class="fas fa-home">
-       </i>
-       Home
-      </a>
-     </li>
-     <li>
-      <a href="#about" onclick="closeMobileMenu()">
-       <i class="fas fa-user">
-       </i>
-       About
-      </a>
-     </li>
-     <li>
-      <a href="#education" onclick="closeMobileMenu()">
-       <i class="fas fa-graduation-cap">
-       </i>
-       Education
-      </a>
-     </li>
-     <li>
-      <a href="#experience" onclick="closeMobileMenu()">
-       <i class="fas fa-briefcase">
-       </i>
-       Experience
-      </a>
-     </li>
-     <li>
-      <a href="#skills" onclick="closeMobileMenu()">
-       <i class="fas fa-cogs">
-       </i>
-       Skills
-      </a>
-     </li>
-     <li>
-      <a href="#projects" onclick="closeMobileMenu()">
-       <i class="fas fa-code">
-       </i>
-       Projects
-      </a>
-     </li>
-     <li>
-      <a href="#additional-info" onclick="closeMobileMenu()">
-       <i class="fas fa-info-circle">
-       </i>
-       Additional Info
-      </a>
-     </li>
-     <li>
-      <a href="#contact" onclick="closeMobileMenu()">
-       <i class="fas fa-envelope">
-       </i>
-       Contact
-      </a>
-     </li>
-    </ul>
-   </div>
-  </nav>
-  <section class="hero" id="home">
-   <div class="hero-content">
-    <h1>
-     Vaishalee Singh
-    </h1>
-    <p class="subtitle">
-     Frontend Developer | React & Next.js Specialist | Building Scalable Web Applications
-    </p>
-    <div class="cta-buttons">
-     <a class="btn btn-primary" href="#projects">
-      <i class="fas fa-code">
-      </i>
-      View Projects
-     </a>
-     <a class="btn btn-secondary" href="#contact">
-      <i class="fas fa-envelope">
-      </i>
-      Get In Touch
-     </a>
-    </div>
-   </div>
-  </section>
-  <section class="section fade-in" id="about">
-   <h2 class="section-title">
-    About Me
-   </h2>
-   <div class="about-content">
-    <div class="profile-img">
-     <img alt="Vaishalee Singh - Computer Science Engineering Graduate" loading="lazy" src="Profilephoto.jpg"/>
-    </div>
-    <div class="about-text">
-     <h3>
-      Hello! I'm Vaishalee Singh
-     </h3>
-     <p>
-      Passionate Frontend Developer with hands-on experience in React, Next.js, and modern state management solutions (Redux, Zustand). Currently working as Frontend Intern at Rapid Innovation, developing scalable web applications with responsive designs, animations, and analytics integration.
-     </p>
-     <p>
-      I specialize in building modern frontend architectures using Next.js 16 and React 19, implementing state management with Redux and Zustand, creating responsive UIs with Tailwind CSS, and integrating analytics tools like Mixpanel for data-driven insights. My work includes developing scalable frontend solutions, working with Strapi CMS for content management, and creating visually compelling UI/UX elements.
-     </p>
-     <p>
-      Seeking opportunities to leverage expertise in frontend technologies, contribute to innovative projects, and continue growing in a collaborative, technology-driven environment.
-     </p>
-    </div>
-   </div>
-  </section>
-  <section class="section fade-in" id="education">
-   <h2 class="section-title">
-    Education
-   </h2>
-   <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       Bachelor of Technology (B.Tech)
-      </h3>
-      <p class="project-tech">
-       Computer Science and Engineering
-      </p>
-     </div>
-     <div class="project-body">
-      <p style="margin-bottom: 1rem;">
-       <strong>Amity University Uttar Pradesh</strong>
-       <br/>
-       <span style="opacity: 0.9;">2026 | CGPA: 8.19/10</span>
-      </p>
-      <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.6;">
-       <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Web Development, AI/ML, Database Systems, Object-Oriented Programming, Software Engineering, Computer Networks, Operating Systems
-      </p>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       Senior Secondary (XII)
-      </h3>
-      <p class="project-tech">
-       Science
-      </p>
-     </div>
-     <div class="project-body">
-      <p>
-       <strong>Stella Maris Convent School, Sultanpur, UP</strong>
-       <br/>
-       <span style="opacity: 0.9;">CBSE Board | 89.4%</span>
-      </p>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       Secondary (X)
-      </h3>
-      <p class="project-tech">
-       CBSE
-      </p>
-     </div>
-     <div class="project-body">
-      <p>
-       <strong>Stella Maris Convent School, Sultanpur, UP</strong>
-       <br/>
-       <span style="opacity: 0.9;">CBSE Board | 92%</span>
-      </p>
-     </div>
-    </div>
-   </div>
-  </section>
-  <section class="section fade-in" id="experience">
-   <h2 class="section-title">
-    Experience
-   </h2>
-   <div class="projects-grid" style="grid-template-columns: 1fr;">
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       Frontend Intern
-      </h3>
-      <p class="project-tech">
-       Rapid Innovation | Nov 2025 to Current
-      </p>
-     </div>
-     <div class="project-body">
-      <div style="margin-bottom: 1.5rem;">
-       <h4 style="color: rgba(255, 255, 255, 0.95); margin-bottom: 0.8rem; font-size: 1.1rem;">
-        Key Projects:
-       </h4>
-       <div style="margin-left: 1rem;">
-        <h5 style="color: rgba(255, 255, 255, 0.85); font-style: italic; margin-bottom: 0.5rem; margin-top: 1rem;">
-         ruh.ai
-        </h5>
-        <ul style="margin-left: 1.5rem; margin-bottom: 1rem; line-height: 1.8;">
-         <li style="margin-bottom: 0.5rem;">
-          Developed scalable frontend architecture implementing Redux and Zustand for efficient state management and optimized application performance
-         </li>
-         <li style="margin-bottom: 0.5rem;">
-          Designed and implemented responsive user interfaces with advanced animations using Tailwind CSS, enhancing user engagement and visual appeal
-         </li>
-         <li style="margin-bottom: 0.5rem;">
-          Integrated Strapi CMS to enable dynamic content management, API creation, and seamless content delivery across the platform
-         </li>
-         <li style="margin-bottom: 0.5rem;">
-          Collaborated with design teams using Canva and 3D design tools to create and implement visually compelling UI/UX elements
-         </li>
-        </ul>
-        <h5 style="color: rgba(255, 255, 255, 0.85); font-style: italic; margin-bottom: 0.5rem; margin-top: 1rem;">
-         ruhapp
-        </h5>
-        <ul style="margin-left: 1.5rem; line-height: 1.8;">
-         <li style="margin-bottom: 0.5rem;">
-          Implemented Mixpanel analytics integration to track user behavior, generate actionable insights, and support data-driven decision making
-         </li>
-        </ul>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <section class="section fade-in" id="skills">
-   <h2 class="section-title">
-    Technical Skills
-   </h2>
-   <div class="skills-grid">
-    <div class="skill-category">
-     <i class="fas fa-code">
-     </i>
-     <h3>
-      Languages
-     </h3>
-     <p>
-      Proficient in <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>Java</strong>, and <strong>C++</strong> for building robust and scalable applications
-     </p>
-    </div>
-    <div class="skill-category">
-     <i class="fas fa-globe">
-     </i>
-     <h3>
-      Frontend Frameworks
-     </h3>
-     <p>
-      Expertise in <strong>React</strong> and <strong>Next.js</strong> for building modern, performant web applications with server-side rendering
-     </p>
-    </div>
-    <div class="skill-category">
-     <i class="fas fa-cogs">
-     </i>
-     <h3>
-      State Management
-     </h3>
-     <p>
-      Skilled in <strong>Redux</strong> and <strong>Zustand</strong> for efficient application state management and data flow optimization
-     </p>
-    </div>
-    <div class="skill-category">
-     <i class="fas fa-paint-brush">
-     </i>
-     <h3>
-      Styling &amp; UI
-     </h3>
-     <p>
-      Proficient in <strong>Tailwind CSS</strong> for rapid UI development with utility-first styling and responsive design
-     </p>
-    </div>
-    <div class="skill-category">
-     <i class="fas fa-tools">
-     </i>
-     <h3>
-      Tools &amp; Platforms
-     </h3>
-     <p>
-      Experienced with <strong>Git</strong>, <strong>Node.js</strong>, <strong>Jira</strong>, <strong>Mixpanel</strong>, <strong>Strapi</strong>, <strong>Google Gemini</strong>, and <strong>MCP</strong> for development, collaboration, and analytics
-     </p>
-    </div>
-    <div class="skill-category">
-     <i class="fas fa-palette">
-     </i>
-     <h3>
-      Design Tools
-     </h3>
-     <p>
-      Proficient in <strong>Canva</strong> and <strong>3D Designing</strong> tools for creating visually compelling UI/UX elements
-     </p>
-    </div>
-    <div class="skill-category">
-     <i class="fas fa-database">
-     </i>
-     <h3>
-      Databases
-     </h3>
-     <p>
-      Experienced with <strong>MySQL</strong> and <strong>MongoDB</strong> for data storage and management in full-stack applications
-     </p>
-    </div>
-    <div class="skill-category">
-     <i class="fas fa-brain">
-     </i>
-     <h3>
-      Concepts
-     </h3>
-     <p>
-      Strong understanding of <strong>AI/ML</strong>, <strong>Web Development</strong>, <strong>API Integration</strong>, and <strong>Agile</strong> methodologies
-     </p>
-    </div>
-   </div>
-  </section>
-  <section class="section fade-in" id="projects">
-   <h2 class="section-title">
-    Featured Projects
-   </h2>
-   <div class="projects-grid">
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       ModuMentor: Agent-Mediated Business Process Automation
-      </h3>
-      <p class="project-tech">
-       ReactJS • Node.js • Express.js • Google Gemini-1.5-Flash • Intelligent Agent Systems • MCP • RESTful APIs • Python • Environment Configuration
-      </p>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
-       Full-stack agent-mediated automation: ReactJS (Netlify), Node.js/Express.js REST API, Python/Flask agentic server with Google Gemini-1.5-Flash, achieving <strong style="color: rgba(255, 255, 255, 0.95);">27% higher accuracy</strong> and <strong style="color: rgba(255, 255, 255, 0.95);">73% enhanced reliability</strong>. MCP-based agentic server orchestrating Resend API, Google Sheets, Gmail, OpenWeather API, Tavily API. RESTful endpoints (/api/chat, /api/analyze, /api/tools, /api/health) deployed on multiple Render instances. Validated on <strong style="color: rgba(255, 255, 255, 0.95);">1,500+ queries</strong> with configurable AI models, fast mode optimization, and Smithery MCP integration.
-      </p>
-      <div class="project-links">
-       <div class="project-links-row">
-        <a class="project-btn" href="https://modumentor-client.netlify.app/" target="_blank">
-         <i class="fas fa-globe">
-         </i>
-         Live Demo
-        </a>
-       </div>
-       <div class="project-links-row">
-        <a class="project-btn" href="https://github.com/VaishaleeSingh/ModuMentorClient" target="_blank">
-         <i class="fab fa-github">
-         </i>
-         Frontend
-        </a>
-        <a class="project-btn" href="https://github.com/VaishaleeSingh/ModumentorAgent-" target="_blank">
-         <i class="fab fa-github">
-         </i>
-         Agent
-        </a>
-        <a class="project-btn" href="https://github.com/VaishaleeSingh/ModuMentorServer" target="_blank">
-         <i class="fab fa-github">
-         </i>
-         Backend
-        </a>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       Digital Recruitment Management System
-      </h3>
-      <p class="project-tech">
-       React 19 • TypeScript • Node.js • Express.js • MongoDB • Material-UI • JWT • React Query • React Hook Form • Mongoose
-      </p>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
-       Full-stack MERN application: React 19, TypeScript, Node.js, Express.js, MongoDB with RESTful API and JWT authentication. AI-powered resume parsing, intelligent chatbot, real-time analytics dashboard with React Query. Features: job posting management, ATS, automated interview scheduling, secure file uploads, email notifications. Built with TypeScript, Material-UI, React Hook Form, Mongoose.
-      </p>
-      <div class="project-links">
-       <div class="project-links-row">
-        <a class="project-btn" href="https://frontend-dr-od6c.onrender.com/" target="_blank">
-         <i class="fas fa-globe">
-         </i>
-         Live Demo
-        </a>
-       </div>
-       <div class="project-links-row">
-        <a class="project-btn" href="https://github.com/VaishaleeSingh/frontend_DR" target="_blank">
-         <i class="fab fa-github">
-         </i>
-         Frontend
-        </a>
-        <a class="project-btn" href="https://github.com/VaishaleeSingh/backend_DR" target="_blank">
-         <i class="fab fa-github">
-         </i>
-         Backend
-        </a>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       Hunting Coder: Full-Stack Blog Platform
-      </h3>
-      <p class="project-tech">
-       Next.js 16 • React 19 • TypeScript • Redux Toolkit • Tailwind CSS • Node.js • RESTful APIs
-      </p>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
-       Full-stack blog platform: Next.js 16, React 19, TypeScript with dynamic blog rendering, advanced search, server-side API routes. File-based JSON storage, SSG for optimized pages with dynamic routing and reading time calculations. Redux Toolkit for state management, dark/light theme switching, Tailwind CSS with custom animations.
-      </p>
-      <div class="project-links">
-       <div class="project-links-row">
-        <a class="project-btn" href="https://hunting-coders.netlify.app/" target="_blank">
-         <i class="fas fa-globe">
-         </i>
-         Live Demo
-        </a>
-       </div>
-       <div class="project-links-row">
-        <a class="project-btn" href="https://github.com/VaishaleeSingh/Hunting-Coders-" target="_blank">
-         <i class="fab fa-github">
-         </i>
-         GitHub
-        </a>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       Weather Forecasting Application
-      </h3>
-      <p class="project-tech">
-       JavaScript • HTML • CSS • Weather API
-      </p>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
-       Real-time weather application with third-party API integration and responsive design. Dynamic data visualization with interactive charts for weather metrics, trends, and forecasts. Location-based prediction system with geolocation support for accurate, location-specific forecasts.
-      </p>
-      <div class="project-links">
-       <div class="project-links-row">
-        <a class="project-btn" href="https://vaishaleesingh.github.io/WeatherForecast/" target="_blank">
-         <i class="fas fa-globe">
-         </i>
-         Live Demo
-        </a>
-       </div>
-       <div class="project-links-row">
-        <a class="project-btn" href="https://github.com/VaishaleeSingh/WeatherForecast" target="_blank">
-         <i class="fab fa-github">
-         </i>
-         GitHub
-        </a>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       TextForge: Text Utility & Analyzer Web Application
-      </h3>
-      <p class="project-tech">
-       React 19 • React Router DOM • JavaScript (ES6+) • CSS3 • Bootstrap 5 • Intersection Observer API • File API • Clipboard API
-      </p>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
-       Text analysis and manipulation web app: React 19 with real-time transformations, analytics, and file operations. Advanced text analytics: word/character counting, reading time estimation, word frequency analysis. 7+ text transformation functions, 8 customizable themes with localStorage persistence. Scroll-triggered animations using Intersection Observer API, file operations using File API and Clipboard API. Responsive UI with Bootstrap 5, CSS Grid, and Flexbox.
-      </p>
-      <div class="project-links">
-       <div class="project-links-row">
-        <a class="project-btn" href="https://dreamy-kulfi-20d862.netlify.app/" target="_blank">
-         <i class="fas fa-globe">
-         </i>
-         Live Demo
-        </a>
-       </div>
-       <div class="project-links-row">
-        <a class="project-btn" href="https://github.com/VaishaleeSingh/TextForge.git" target="_blank">
-         <i class="fab fa-github">
-         </i>
-         GitHub
-        </a>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       NewsMonkey: Real-Time News Aggregation Platform
-      </h3>
-      <p class="project-tech">
-       React 19 • JavaScript • React Router • RESTful APIs • CSS3 • Bootstrap 5 • Intersection Observer API
-      </p>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
-       React-based news aggregation platform: NewsAPI and GNews APIs integration, real-time article fetching across 7+ categories with 14+ countries support. Infinite scroll pagination using Intersection Observer API, optimized with useCallback hooks and memoization. Glassmorphism UI with CSS3 animations, gradients, backdrop filters, dark/light mode toggle with localStorage persistence. Mobile-first responsive design with Bootstrap 5 grid system and custom CSS breakpoints.
-      </p>
-      <div class="project-links">
-       <div class="project-links-row">
-        <a class="project-btn" href="https://news-monkey1.netlify.app/" target="_blank">
-         <i class="fas fa-globe">
-         </i>
-         Live Demo
-        </a>
-       </div>
-       <div class="project-links-row">
-        <a class="project-btn" href="https://github.com/VaishaleeSingh/News-Monkey" target="_blank">
-         <i class="fab fa-github">
-         </i>
-         GitHub
-        </a>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <section class="section fade-in" id="additional-info">
-   <h2 class="section-title">
-    Additional Information
-   </h2>
-   <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       <i class="fas fa-users" style="margin-right: 0.5rem;"></i>
-       Soft Skills
-      </h3>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8;">
-       Problem-Solving, Team Collaboration, Agile Methodology, Communication, Adaptability, Attention to Detail
-      </p>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       <i class="fas fa-language" style="margin-right: 0.5rem;"></i>
-       Languages
-      </h3>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8;">
-       English (Fluent), Hindi (Native)
-      </p>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       <i class="fas fa-tasks" style="margin-right: 0.5rem;"></i>
-       Work Methodology
-      </h3>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8;">
-       Agile/Scrum, Version Control (Git), Code Reviews, CI/CD Practices
-      </p>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       <i class="fas fa-heart" style="margin-right: 0.5rem;"></i>
-       Interests
-      </h3>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8;">
-       Frontend Architecture, UI/UX Design, Open-source Contributions, AI/ML Research, Emerging Web Technologies
-      </p>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       <i class="fas fa-bullseye" style="margin-right: 0.5rem;"></i>
-       Professional Focus
-      </h3>
-     </div>
-     <div class="project-body">
-      <p style="line-height: 1.8;">
-       Building Scalable Web Applications, Performance Optimization, User Experience Enhancement
-      </p>
-     </div>
-    </div>
-   </div>
-  </section>
-  <section class="section fade-in" id="contact">
-   <h2 class="section-title">
-    Let's Connect
-   </h2>
-   <div class="contact-content">
-    <h3 style="color: white; margin-bottom: 1rem;">
-     Ready to collaborate on exciting projects?
-    </h3>
-    <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
-     I'm always open to discussing new opportunities, innovative ideas, and potential collaborations.
-    </p>
-    <div class="contact-links">
-     <a class="contact-link" href="mailto:vaishalee.singh@s.amity.edu">
-      <i class="fas fa-envelope">
-      </i>
-      vaishalee.singh@s.amity.edu
-     </a>
-     <a class="contact-link" href="mailto:vaishalisinghsln5@gmail.com">
-      <i class="fas fa-envelope">
-      </i>
-      vaishalisinghsln5@gmail.com
-     </a>
-     <a class="contact-link" href="tel:+916394531994">
-      <i class="fas fa-phone">
-      </i>
-      +91-6394531994
-     </a>
-     <a class="contact-link" href="https://www.linkedin.com/in/vaishalee-singh-934847254" target="_blank">
-      <i class="fab fa-linkedin">
-      </i>
-      LinkedIn Profile
-     </a>
-     <a class="contact-link" href="https://github.com/VaishaleeSingh" target="_blank">
-      <i class="fab fa-github">
-      </i>
-      GitHub Portfolio
-     </a>
-     <a class="contact-link" href="https://vaishaleesingh.github.io/Portfolio/" target="_blank">
-      <i class="fas fa-globe">
-      </i>
-      Portfolio
-     </a>
-    </div>
-   </div>
-  </section>
-  <script>
-   // Logo scroll to top functionality
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="scrollToTop()">
+                <span>
+                    V
+                </span>
+                <span>
+                    S
+                </span>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars">
+                </i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li>
+                    <a href="#home" onclick="closeMobileMenu()">
+                        <i class="fas fa-home">
+                        </i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" onclick="closeMobileMenu()">
+                        <i class="fas fa-user">
+                        </i>
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#education" onclick="closeMobileMenu()">
+                        <i class="fas fa-graduation-cap">
+                        </i>
+                        Education
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience" onclick="closeMobileMenu()">
+                        <i class="fas fa-briefcase">
+                        </i>
+                        Experience
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" onclick="closeMobileMenu()">
+                        <i class="fas fa-cogs">
+                        </i>
+                        Skills
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" onclick="closeMobileMenu()">
+                        <i class="fas fa-code">
+                        </i>
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#additional-info" onclick="closeMobileMenu()">
+                        <i class="fas fa-info-circle">
+                        </i>
+                        Additional Info
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" onclick="closeMobileMenu()">
+                        <i class="fas fa-envelope">
+                        </i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>
+                Vaishalee Singh
+            </h1>
+            <p class="subtitle">
+                Frontend Developer | React & Next.js Specialist | Building Scalable Web Applications
+            </p>
+            <div class="cta-buttons">
+                <a class="btn btn-primary" href="#projects">
+                    <i class="fas fa-code">
+                    </i>
+                    View Projects
+                </a>
+                <a class="btn btn-secondary" href="#contact">
+                    <i class="fas fa-envelope">
+                    </i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section fade-in" id="about">
+        <h2 class="section-title">
+            About Me
+        </h2>
+        <div class="about-content">
+            <div class="profile-img">
+                <img alt="Vaishalee Singh - Computer Science Engineering Graduate" loading="lazy"
+                    src="Vaishalee.jpeg" />
+            </div>
+            <div class="about-text">
+                <h3>
+                    Hello! I'm Vaishalee Singh
+                </h3>
+                <p>
+                    Passionate Frontend Developer with hands-on experience in React, Next.js, and modern state
+                    management solutions (Redux, Zustand). Currently working as Frontend Intern at Rapid Innovation,
+                    developing scalable web applications with responsive designs, animations, and analytics integration.
+                </p>
+                <p>
+                    I specialize in building modern frontend architectures using Next.js 16 and React 19, implementing
+                    state management with Redux and Zustand, creating responsive UIs with Tailwind CSS, and integrating
+                    analytics tools like Mixpanel for data-driven insights. My work includes developing scalable
+                    frontend solutions, working with Strapi CMS for content management, and creating visually compelling
+                    UI/UX elements.
+                </p>
+                <p>
+                    Seeking opportunities to leverage expertise in frontend technologies, contribute to innovative
+                    projects, and continue growing in a collaborative, technology-driven environment.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section fade-in" id="education">
+        <h2 class="section-title">
+            Education
+        </h2>
+        <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        Bachelor of Technology (B.Tech)
+                    </h3>
+                    <p class="project-tech">
+                        Computer Science and Engineering
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p style="margin-bottom: 1rem;">
+                        <strong>Amity University Uttar Pradesh</strong>
+                        <br />
+                        <span style="opacity: 0.9;">2026 | CGPA: 8.19/10</span>
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.6;">
+                        <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Web Development, AI/ML,
+                        Database Systems, Object-Oriented Programming, Software Engineering, Computer Networks,
+                        Operating Systems
+                    </p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        Senior Secondary (XII)
+                    </h3>
+                    <p class="project-tech">
+                        Science
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p>
+                        <strong>Stella Maris Convent School, Sultanpur, UP</strong>
+                        <br />
+                        <span style="opacity: 0.9;">CBSE Board | 89.4%</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        Secondary (X)
+                    </h3>
+                    <p class="project-tech">
+                        CBSE
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p>
+                        <strong>Stella Maris Convent School, Sultanpur, UP</strong>
+                        <br />
+                        <span style="opacity: 0.9;">CBSE Board | 92%</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section fade-in" id="experience">
+        <h2 class="section-title">
+            Experience
+        </h2>
+        <div class="projects-grid" style="grid-template-columns: 1fr;">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        Frontend Intern
+                    </h3>
+                    <p class="project-tech">
+                        Rapid Innovation | Nov 2025 to Current
+                    </p>
+                </div>
+                <div class="project-body">
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: rgba(255, 255, 255, 0.95); margin-bottom: 0.8rem; font-size: 1.1rem;">
+                            Key Projects:
+                        </h4>
+                        <div style="margin-left: 1rem;">
+                            <h5
+                                style="color: rgba(255, 255, 255, 0.85); font-style: italic; margin-bottom: 0.5rem; margin-top: 1rem;">
+                                ruh.ai
+                            </h5>
+                            <ul style="margin-left: 1.5rem; margin-bottom: 1rem; line-height: 1.8;">
+                                <li style="margin-bottom: 0.5rem;">
+                                    Developed scalable frontend architecture implementing Redux and Zustand for
+                                    efficient state management and optimized application performance
+                                </li>
+                                <li style="margin-bottom: 0.5rem;">
+                                    Designed and implemented responsive user interfaces with advanced animations using
+                                    Tailwind CSS, enhancing user engagement and visual appeal
+                                </li>
+                                <li style="margin-bottom: 0.5rem;">
+                                    Integrated Strapi CMS to enable dynamic content management, API creation, and
+                                    seamless content delivery across the platform
+                                </li>
+                                <li style="margin-bottom: 0.5rem;">
+                                    Collaborated with design teams using Canva and 3D design tools to create and
+                                    implement visually compelling UI/UX elements
+                                </li>
+                            </ul>
+                            <h5
+                                style="color: rgba(255, 255, 255, 0.85); font-style: italic; margin-bottom: 0.5rem; margin-top: 1rem;">
+                                ruhapp
+                            </h5>
+                            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                                <li style="margin-bottom: 0.5rem;">
+                                    Implemented Mixpanel analytics integration to track user behavior, generate
+                                    actionable insights, and support data-driven decision making
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section fade-in" id="skills">
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <i class="fas fa-code">
+                </i>
+                <h3>
+                    Languages
+                </h3>
+                <p>
+                    Proficient in <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>,
+                    <strong>Java</strong>, and <strong>C++</strong> for building robust and scalable applications
+                </p>
+            </div>
+            <div class="skill-category">
+                <i class="fas fa-globe">
+                </i>
+                <h3>
+                    Frontend Frameworks
+                </h3>
+                <p>
+                    Expertise in <strong>React</strong> and <strong>Next.js</strong> for building modern, performant web
+                    applications with server-side rendering
+                </p>
+            </div>
+            <div class="skill-category">
+                <i class="fas fa-cogs">
+                </i>
+                <h3>
+                    State Management
+                </h3>
+                <p>
+                    Skilled in <strong>Redux</strong> and <strong>Zustand</strong> for efficient application state
+                    management and data flow optimization
+                </p>
+            </div>
+            <div class="skill-category">
+                <i class="fas fa-paint-brush">
+                </i>
+                <h3>
+                    Styling &amp; UI
+                </h3>
+                <p>
+                    Proficient in <strong>Tailwind CSS</strong> for rapid UI development with utility-first styling and
+                    responsive design
+                </p>
+            </div>
+            <div class="skill-category">
+                <i class="fas fa-tools">
+                </i>
+                <h3>
+                    Tools &amp; Platforms
+                </h3>
+                <p>
+                    Experienced with <strong>Git</strong>, <strong>Node.js</strong>, <strong>Jira</strong>,
+                    <strong>Mixpanel</strong>, <strong>Strapi</strong>, <strong>Google Gemini</strong>, and
+                    <strong>MCP</strong> for development, collaboration, and analytics
+                </p>
+            </div>
+            <div class="skill-category">
+                <i class="fas fa-palette">
+                </i>
+                <h3>
+                    Design Tools
+                </h3>
+                <p>
+                    Proficient in <strong>Canva</strong> and <strong>3D Designing</strong> tools for creating visually
+                    compelling UI/UX elements
+                </p>
+            </div>
+            <div class="skill-category">
+                <i class="fas fa-database">
+                </i>
+                <h3>
+                    Databases
+                </h3>
+                <p>
+                    Experienced with <strong>MySQL</strong> and <strong>MongoDB</strong> for data storage and management
+                    in full-stack applications
+                </p>
+            </div>
+            <div class="skill-category">
+                <i class="fas fa-brain">
+                </i>
+                <h3>
+                    Concepts
+                </h3>
+                <p>
+                    Strong understanding of <strong>AI/ML</strong>, <strong>Web Development</strong>, <strong>API
+                        Integration</strong>, and <strong>Agile</strong> methodologies
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section fade-in" id="projects">
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        ModuMentor: Agent-Mediated Business Process Automation
+                    </h3>
+                    <p class="project-tech">
+                        ReactJS • Node.js • Express.js • Google Gemini-1.5-Flash • Intelligent Agent Systems • MCP •
+                        RESTful APIs • Python • Environment Configuration
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+                        Full-stack agent-mediated automation: ReactJS (Netlify), Node.js/Express.js REST API,
+                        Python/Flask agentic server with Google Gemini-1.5-Flash, achieving <strong
+                            style="color: rgba(255, 255, 255, 0.95);">27% higher accuracy</strong> and <strong
+                            style="color: rgba(255, 255, 255, 0.95);">73% enhanced reliability</strong>. MCP-based
+                        agentic server orchestrating Resend API, Google Sheets, Gmail, OpenWeather API, Tavily API.
+                        RESTful endpoints (/api/chat, /api/analyze, /api/tools, /api/health) deployed on multiple Render
+                        instances. Validated on <strong style="color: rgba(255, 255, 255, 0.95);">1,500+
+                            queries</strong> with configurable AI models, fast mode optimization, and Smithery MCP
+                        integration.
+                    </p>
+                    <div class="project-links">
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://modumentor-client.netlify.app/" target="_blank">
+                                <i class="fas fa-globe">
+                                </i>
+                                Live Demo
+                            </a>
+                        </div>
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://github.com/VaishaleeSingh/ModuMentorClient"
+                                target="_blank">
+                                <i class="fab fa-github">
+                                </i>
+                                Frontend
+                            </a>
+                            <a class="project-btn" href="https://github.com/VaishaleeSingh/ModumentorAgent-"
+                                target="_blank">
+                                <i class="fab fa-github">
+                                </i>
+                                Agent
+                            </a>
+                            <a class="project-btn" href="https://github.com/VaishaleeSingh/ModuMentorServer"
+                                target="_blank">
+                                <i class="fab fa-github">
+                                </i>
+                                Backend
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        Digital Recruitment Management System
+                    </h3>
+                    <p class="project-tech">
+                        React 19 • TypeScript • Node.js • Express.js • MongoDB • Material-UI • JWT • React Query • React
+                        Hook Form • Mongoose
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+                        Full-stack MERN application: React 19, TypeScript, Node.js, Express.js, MongoDB with RESTful API
+                        and JWT authentication. AI-powered resume parsing, intelligent chatbot, real-time analytics
+                        dashboard with React Query. Features: job posting management, ATS, automated interview
+                        scheduling, secure file uploads, email notifications. Built with TypeScript, Material-UI, React
+                        Hook Form, Mongoose.
+                    </p>
+                    <div class="project-links">
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://frontend-dr-od6c.onrender.com/" target="_blank">
+                                <i class="fas fa-globe">
+                                </i>
+                                Live Demo
+                            </a>
+                        </div>
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://github.com/VaishaleeSingh/frontend_DR" target="_blank">
+                                <i class="fab fa-github">
+                                </i>
+                                Frontend
+                            </a>
+                            <a class="project-btn" href="https://github.com/VaishaleeSingh/backend_DR" target="_blank">
+                                <i class="fab fa-github">
+                                </i>
+                                Backend
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        Hunting Coder: Full-Stack Blog Platform
+                    </h3>
+                    <p class="project-tech">
+                        Next.js 16 • React 19 • TypeScript • Redux Toolkit • Tailwind CSS • Node.js • RESTful APIs
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+                        Full-stack blog platform: Next.js 16, React 19, TypeScript with dynamic blog rendering, advanced
+                        search, server-side API routes. File-based JSON storage, SSG for optimized pages with dynamic
+                        routing and reading time calculations. Redux Toolkit for state management, dark/light theme
+                        switching, Tailwind CSS with custom animations.
+                    </p>
+                    <div class="project-links">
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://hunting-coders.netlify.app/" target="_blank">
+                                <i class="fas fa-globe">
+                                </i>
+                                Live Demo
+                            </a>
+                        </div>
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://github.com/VaishaleeSingh/Hunting-Coders-"
+                                target="_blank">
+                                <i class="fab fa-github">
+                                </i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        Weather Forecasting Application
+                    </h3>
+                    <p class="project-tech">
+                        JavaScript • HTML • CSS • Weather API
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+                        Real-time weather application with third-party API integration and responsive design. Dynamic
+                        data visualization with interactive charts for weather metrics, trends, and forecasts.
+                        Location-based prediction system with geolocation support for accurate, location-specific
+                        forecasts.
+                    </p>
+                    <div class="project-links">
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://vaishaleesingh.github.io/WeatherForecast/"
+                                target="_blank">
+                                <i class="fas fa-globe">
+                                </i>
+                                Live Demo
+                            </a>
+                        </div>
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://github.com/VaishaleeSingh/WeatherForecast"
+                                target="_blank">
+                                <i class="fab fa-github">
+                                </i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        TextForge: Text Utility & Analyzer Web Application
+                    </h3>
+                    <p class="project-tech">
+                        React 19 • React Router DOM • JavaScript (ES6+) • CSS3 • Bootstrap 5 • Intersection Observer API
+                        • File API • Clipboard API
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+                        Text analysis and manipulation web app: React 19 with real-time transformations, analytics, and
+                        file operations. Advanced text analytics: word/character counting, reading time estimation, word
+                        frequency analysis. 7+ text transformation functions, 8 customizable themes with localStorage
+                        persistence. Scroll-triggered animations using Intersection Observer API, file operations using
+                        File API and Clipboard API. Responsive UI with Bootstrap 5, CSS Grid, and Flexbox.
+                    </p>
+                    <div class="project-links">
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://dreamy-kulfi-20d862.netlify.app/" target="_blank">
+                                <i class="fas fa-globe">
+                                </i>
+                                Live Demo
+                            </a>
+                        </div>
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://github.com/VaishaleeSingh/TextForge.git"
+                                target="_blank">
+                                <i class="fab fa-github">
+                                </i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        NewsMonkey: Real-Time News Aggregation Platform
+                    </h3>
+                    <p class="project-tech">
+                        React 19 • JavaScript • React Router • RESTful APIs • CSS3 • Bootstrap 5 • Intersection Observer
+                        API
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+                        React-based news aggregation platform: NewsAPI and GNews APIs integration, real-time article
+                        fetching across 7+ categories with 14+ countries support. Infinite scroll pagination using
+                        Intersection Observer API, optimized with useCallback hooks and memoization. Glassmorphism UI
+                        with CSS3 animations, gradients, backdrop filters, dark/light mode toggle with localStorage
+                        persistence. Mobile-first responsive design with Bootstrap 5 grid system and custom CSS
+                        breakpoints.
+                    </p>
+                    <div class="project-links">
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://news-monkey1.netlify.app/" target="_blank">
+                                <i class="fas fa-globe">
+                                </i>
+                                Live Demo
+                            </a>
+                        </div>
+                        <div class="project-links-row">
+                            <a class="project-btn" href="https://github.com/VaishaleeSingh/News-Monkey" target="_blank">
+                                <i class="fab fa-github">
+                                </i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section fade-in" id="additional-info">
+        <h2 class="section-title">
+            Additional Information
+        </h2>
+        <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        <i class="fas fa-users" style="margin-right: 0.5rem;"></i>
+                        Soft Skills
+                    </h3>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8;">
+                        Problem-Solving, Team Collaboration, Agile Methodology, Communication, Adaptability, Attention
+                        to Detail
+                    </p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        <i class="fas fa-language" style="margin-right: 0.5rem;"></i>
+                        Languages
+                    </h3>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8;">
+                        English (Fluent), Hindi (Native)
+                    </p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        <i class="fas fa-tasks" style="margin-right: 0.5rem;"></i>
+                        Work Methodology
+                    </h3>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8;">
+                        Agile/Scrum, Version Control (Git), Code Reviews, CI/CD Practices
+                    </p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        <i class="fas fa-heart" style="margin-right: 0.5rem;"></i>
+                        Interests
+                    </h3>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8;">
+                        Frontend Architecture, UI/UX Design, Open-source Contributions, AI/ML Research, Emerging Web
+                        Technologies
+                    </p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        <i class="fas fa-bullseye" style="margin-right: 0.5rem;"></i>
+                        Professional Focus
+                    </h3>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8;">
+                        Building Scalable Web Applications, Performance Optimization, User Experience Enhancement
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section fade-in" id="contact">
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+        <div class="contact-content">
+            <h3 style="color: white; margin-bottom: 1rem;">
+                Ready to collaborate on exciting projects?
+            </h3>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                I'm always open to discussing new opportunities, innovative ideas, and potential collaborations.
+            </p>
+            <div class="contact-links">
+                <a class="contact-link" href="mailto:vaishalee.singh@s.amity.edu">
+                    <i class="fas fa-envelope">
+                    </i>
+                    vaishalee.singh@s.amity.edu
+                </a>
+                <a class="contact-link" href="mailto:vaishalisinghsln5@gmail.com">
+                    <i class="fas fa-envelope">
+                    </i>
+                    vaishalisinghsln5@gmail.com
+                </a>
+                <a class="contact-link" href="tel:+916394531994">
+                    <i class="fas fa-phone">
+                    </i>
+                    +91-6394531994
+                </a>
+                <a class="contact-link" href="https://www.linkedin.com/in/vaishalee-singh-934847254" target="_blank">
+                    <i class="fab fa-linkedin">
+                    </i>
+                    LinkedIn Profile
+                </a>
+                <a class="contact-link" href="https://github.com/VaishaleeSingh" target="_blank">
+                    <i class="fab fa-github">
+                    </i>
+                    GitHub Portfolio
+                </a>
+                <a class="contact-link" href="https://vaishaleesingh.github.io/Portfolio/" target="_blank">
+                    <i class="fas fa-globe">
+                    </i>
+                    Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Logo scroll to top functionality
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
@@ -1909,7 +2017,7 @@
         }
 
         // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             const nav = document.querySelector('nav');
             const navLinks = document.getElementById('navLinks');
 
@@ -1994,6 +2102,7 @@
             // Reduce animation complexity on mobile for better performance
             document.documentElement.style.setProperty('--animation-duration', '0.3s');
         }
-  </script>
- </body>
+    </script>
+</body>
+
 </html>
