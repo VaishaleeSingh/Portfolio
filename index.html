@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
   <title>
    Vaishalee Singh - Portfolio
   </title>
@@ -19,6 +19,17 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
         /* Animated Background */
@@ -28,10 +39,23 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background: linear-gradient(-45deg, #1a1f3a, #2d3561, #3d4a7a, #2c3e50, #34495e, #1e2a3a);
             background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
+            animation: gradientShift 25s ease infinite;
             z-index: -1;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(52, 73, 94, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(45, 53, 97, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 20%, rgba(30, 42, 58, 0.1) 0%, transparent 50%);
+            animation: pulse 20s ease-in-out infinite;
         }
 
         @keyframes gradientShift {
@@ -40,25 +64,32 @@
             100% { background-position: 0% 50%; }
         }
 
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+
         /* Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(30px) saturate(180%);
+            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
             padding: 0.8rem 0;
             z-index: 1000;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
         }
 
         nav.scrolled {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(30px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         }
 
         .nav-container {
@@ -73,13 +104,14 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #e8eaf6 50%, #c5cae9 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             position: relative;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
 
         .logo::before {
@@ -89,7 +121,7 @@
             left: -5px;
             right: -5px;
             bottom: -5px;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
             border-radius: 50%;
             opacity: 0;
             z-index: -1;
@@ -148,6 +180,7 @@
             gap: 0.5rem;
             font-size: 0.95rem;
             letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .nav-links a i {
@@ -166,7 +199,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
             transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: -1;
             border-radius: 25px;
@@ -180,14 +213,14 @@
         .nav-links a:hover {
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .nav-links a.active {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.15));
             color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(10px);
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
@@ -235,13 +268,19 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5), 0 0 20px rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, #ffffff 0%, #e8eaf6 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero .subtitle {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4), 0 0 10px rgba(255, 255, 255, 0.1);
+            letter-spacing: 0.5px;
         }
 
         .cta-buttons {
@@ -266,26 +305,34 @@
         }
 
         .btn-primary {
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
             color: white;
-            border: 2px solid white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            backdrop-filter: blur(10px);
         }
 
         .btn-primary:hover {
-            background: white;
-            color: #667eea;
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+            color: #2c3e50;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+            border-color: rgba(255, 255, 255, 0.6);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
             color: white;
             border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+            backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         /* Sections */
@@ -300,7 +347,28 @@
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.4), 0 0 15px rgba(255, 255, 255, 0.1);
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4), transparent);
+            border-radius: 2px;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.4; width: 80px; }
+            50% { opacity: 0.7; width: 100px; }
         }
 
         /* About Section */
@@ -309,10 +377,13 @@
             grid-template-columns: 1fr 2fr;
             gap: 3rem;
             align-items: center;
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
             padding: 3rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
         }
 
         .profile-img {
@@ -322,9 +393,9 @@
             margin: 0 auto;
             position: relative;
             overflow: hidden;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 4px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.1) inset;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .profile-img::before {
@@ -334,10 +405,10 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
             border-radius: 50%;
             z-index: -1;
-            animation: gradientRotate 3s linear infinite;
+            animation: gradientRotate 8s linear infinite;
         }
 
         @keyframes gradientRotate {
@@ -347,7 +418,8 @@
 
         .profile-img:hover {
             transform: scale(1.05);
-            box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.2) inset;
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         .profile-img img {
@@ -382,34 +454,87 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
+            align-items: stretch;
         }
 
         .skill-category {
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
             padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
         }
 
         .skill-category:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+            border-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .skill-category:hover::before {
+            left: 100%;
         }
 
         .skill-category i {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: white;
             margin-bottom: 1rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            padding: 1rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-category:hover i {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         }
 
         .skill-category h3 {
             color: white;
             margin-bottom: 1rem;
+            font-size: 1.2rem;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .skill-category:hover h3 {
+            color: rgba(255, 255, 255, 1);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
         .skill-category p {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1rem;
+            line-height: 1.6;
+            transition: all 0.4s ease;
+        }
+
+        .skill-category:hover p {
+            color: white;
         }
 
         /* Projects Section */
@@ -417,25 +542,79 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
+            align-items: stretch;
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+            border-radius: 20px;
             overflow: hidden;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
         }
 
         .project-header {
             padding: 1.5rem;
-            background: linear-gradient(45deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.8), rgba(45, 53, 97, 0.75));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            animation: rotate 40s linear infinite;
+            opacity: 0.4;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .project-card:hover .project-header::before {
+            opacity: 0.6;
+            animation-duration: 35s;
         }
 
         .project-header h3 {
@@ -444,9 +623,19 @@
             margin-bottom: 0.5rem;
         }
 
+        .project-header h3 i {
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-header h3 i {
+            transform: scale(1.1);
+        }
+
         .project-tech {
             color: rgba(255, 255, 255, 0.9);
             font-size: 0.9rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .project-body {
@@ -461,35 +650,54 @@
 
         .project-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+
+        .project-links-row {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
         .project-btn {
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
             color: white;
             text-decoration: none;
             border-radius: 25px;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            justify-content: center;
+            min-width: 120px;
         }
 
         .project-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.25));
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         /* Contact Section */
         .contact-content {
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
             padding: 3rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
         }
 
         .contact-links {
@@ -512,7 +720,8 @@
 
         .contact-link:hover {
             transform: translateY(-3px);
-            color: #f093fb;
+            color: rgba(255, 255, 255, 1);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
         .contact-link i {
@@ -543,7 +752,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.6), rgba(118, 75, 162, 0.6));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
             transition: left 0.3s ease;
             z-index: -1;
             backdrop-filter: blur(10px);
@@ -555,7 +764,7 @@
 
         .mobile-menu-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             color: white;
             border-color: rgba(255, 255, 255, 0.4);
         }
@@ -622,23 +831,38 @@
             color: white;
             border-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
         .nav-links.mobile-open a.active {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.6), rgba(118, 75, 162, 0.6));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
             color: white;
             border-color: rgba(255, 255, 255, 0.3);
         }
 
         /* Responsive Design */
+        @media (max-width: 1400px) {
+            .section {
+                max-width: 1100px;
+            }
+        }
+
         @media (max-width: 1200px) {
             .section {
                 padding: 4rem 1.5rem;
+                max-width: 100%;
             }
 
             .nav-container {
                 padding: 0 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             }
         }
 
@@ -655,6 +879,7 @@
                 grid-template-columns: 1fr;
                 text-align: center;
                 gap: 2rem;
+                padding: 2.5rem;
             }
 
             .profile-img {
@@ -670,6 +895,14 @@
             .projects-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-links {
+                gap: 1.5rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -681,16 +914,23 @@
                 display: none;
             }
 
+            .nav-container {
+                padding: 0 1rem;
+            }
+
             .hero {
                 padding: 0 1rem;
+                min-height: 90vh;
             }
 
             .hero h1 {
                 font-size: 2.5rem;
+                line-height: 1.2;
             }
 
             .hero .subtitle {
                 font-size: 1.1rem;
+                padding: 0 1rem;
             }
 
             .section {
@@ -699,10 +939,16 @@
 
             .section-title {
                 font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .section-title::after {
+                width: 60px;
             }
 
             .about-content {
-                padding: 2rem;
+                padding: 2rem 1.5rem;
+                gap: 1.5rem;
             }
 
             .about-text h3 {
@@ -711,6 +957,7 @@
 
             .about-text p {
                 font-size: 1rem;
+                line-height: 1.7;
             }
 
             .skills-grid {
@@ -722,9 +969,18 @@
                 padding: 1.5rem;
             }
 
+            .skill-category i {
+                font-size: 3rem;
+                padding: 0.8rem;
+            }
+
             .projects-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+
+            .project-card {
+                border-radius: 15px;
             }
 
             .cta-buttons {
@@ -734,8 +990,10 @@
             }
 
             .btn {
-                width: 200px;
+                width: 100%;
+                max-width: 250px;
                 justify-content: center;
+                padding: 14px 28px;
             }
 
             .contact-links {
@@ -745,7 +1003,11 @@
             }
 
             .contact-content {
-                padding: 2rem;
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-link {
+                font-size: 1rem;
             }
 
             .project-links {
@@ -755,6 +1017,16 @@
 
             .project-btn {
                 justify-content: center;
+                width: 100%;
+            }
+
+            .project-body ul {
+                margin-left: 1rem;
+            }
+
+            .project-body li {
+                font-size: 0.95rem;
+                margin-bottom: 0.6rem;
             }
         }
 
@@ -819,9 +1091,13 @@
             }
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 375px) {
             .hero h1 {
                 font-size: 1.8rem;
+            }
+
+            .hero .subtitle {
+                font-size: 0.9rem;
             }
 
             .section-title {
@@ -829,13 +1105,112 @@
             }
 
             .profile-img {
+                width: 130px;
+                height: 130px;
+            }
+
+            .skill-category {
+                padding: 1rem;
+            }
+
+            .skill-category i {
+                font-size: 2rem;
+            }
+
+            .project-header h3 {
+                font-size: 1rem;
+            }
+
+            .btn {
+                max-width: 180px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero .subtitle {
+                font-size: 0.85rem;
+            }
+
+            .section {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .profile-img {
                 width: 120px;
                 height: 120px;
             }
 
+            .about-content {
+                padding: 1rem;
+            }
+
+            .skill-category {
+                padding: 0.8rem;
+            }
+
+            .skill-category i {
+                font-size: 1.8rem;
+                padding: 0.5rem;
+            }
+
             .btn {
-                width: 160px;
+                max-width: 160px;
                 padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+
+            .project-btn {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+        }
+
+        /* Landscape orientation for mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                min-height: 100vh;
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .btn,
+            .project-btn,
+            .nav-links a {
+                min-height: 44px;
+                min-width: 44px;
+            }
+
+            .skill-category:hover {
+                transform: none;
+            }
+
+            .project-card:hover {
+                transform: none;
             }
         }
 
@@ -885,6 +1260,20 @@
       </a>
      </li>
      <li>
+      <a href="#education" onclick="closeMobileMenu()">
+       <i class="fas fa-graduation-cap">
+       </i>
+       Education
+      </a>
+     </li>
+     <li>
+      <a href="#experience" onclick="closeMobileMenu()">
+       <i class="fas fa-briefcase">
+       </i>
+       Experience
+      </a>
+     </li>
+     <li>
       <a href="#skills" onclick="closeMobileMenu()">
        <i class="fas fa-cogs">
        </i>
@@ -896,6 +1285,13 @@
        <i class="fas fa-code">
        </i>
        Projects
+      </a>
+     </li>
+     <li>
+      <a href="#additional-info" onclick="closeMobileMenu()">
+       <i class="fas fa-info-circle">
+       </i>
+       Additional Info
       </a>
      </li>
      <li>
@@ -914,7 +1310,7 @@
      Vaishalee Singh
     </h1>
     <p class="subtitle">
-     Computer Science Engineering Graduate | AI Enthusiast | Full-Stack Developer
+     Frontend Developer | React & Next.js Specialist | Building Scalable Web Applications
     </p>
     <div class="cta-buttons">
      <a class="btn btn-primary" href="#projects">
@@ -943,80 +1339,212 @@
       Hello! I'm Vaishalee Singh
      </h3>
      <p>
-      A passionate Computer Science Engineering graduate from Amity University Uttar Pradesh with a CGPA of 8.19/10. I specialize in AI/ML, web development, and creating innovative solutions that bridge technology and real-world problems.
+      Passionate Frontend Developer with hands-on experience in React, Next.js, and modern state management solutions (Redux, Zustand). Currently working as Frontend Intern at Rapid Innovation, developing scalable web applications with responsive designs, animations, and analytics integration.
      </p>
      <p>
-      My journey in technology has led me to develop cutting-edge projects like ModuMentor, an agent-mediated business process automation system that achieved 27% higher accuracy and 73% enhanced reliability. I'm constantly exploring emerging technologies and contributing to open-source projects.
+      I specialize in building modern frontend architectures using Next.js 16 and React 19, implementing state management with Redux and Zustand, creating responsive UIs with Tailwind CSS, and integrating analytics tools like Mixpanel for data-driven insights. My work includes developing scalable frontend solutions, working with Strapi CMS for content management, and creating visually compelling UI/UX elements.
      </p>
      <p>
-      When I'm not coding, you'll find me researching the latest AI trends, contributing to tech communities, or working on personal projects that challenge my creativity and technical skills.
+      Seeking opportunities to leverage expertise in frontend technologies, contribute to innovative projects, and continue growing in a collaborative, technology-driven environment.
      </p>
+    </div>
+   </div>
+  </section>
+  <section class="section fade-in" id="education">
+   <h2 class="section-title">
+    Education
+   </h2>
+   <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       Bachelor of Technology (B.Tech)
+      </h3>
+      <p class="project-tech">
+       Computer Science and Engineering
+      </p>
+     </div>
+     <div class="project-body">
+      <p style="margin-bottom: 1rem;">
+       <strong>Amity University Uttar Pradesh</strong>
+       <br/>
+       <span style="opacity: 0.9;">2026 | CGPA: 8.19/10</span>
+      </p>
+      <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.6;">
+       <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Web Development, AI/ML, Database Systems, Object-Oriented Programming, Software Engineering, Computer Networks, Operating Systems
+      </p>
+     </div>
+    </div>
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       Senior Secondary (XII)
+      </h3>
+      <p class="project-tech">
+       Science
+      </p>
+     </div>
+     <div class="project-body">
+      <p>
+       <strong>Stella Maris Convent School, Sultanpur, UP</strong>
+       <br/>
+       <span style="opacity: 0.9;">CBSE Board | 89.4%</span>
+      </p>
+     </div>
+    </div>
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       Secondary (X)
+      </h3>
+      <p class="project-tech">
+       CBSE
+      </p>
+     </div>
+     <div class="project-body">
+      <p>
+       <strong>Stella Maris Convent School, Sultanpur, UP</strong>
+       <br/>
+       <span style="opacity: 0.9;">CBSE Board | 92%</span>
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="section fade-in" id="experience">
+   <h2 class="section-title">
+    Experience
+   </h2>
+   <div class="projects-grid" style="grid-template-columns: 1fr;">
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       Frontend Intern
+      </h3>
+      <p class="project-tech">
+       Rapid Innovation | Nov 2025 to Current
+      </p>
+     </div>
+     <div class="project-body">
+      <div style="margin-bottom: 1.5rem;">
+       <h4 style="color: rgba(255, 255, 255, 0.95); margin-bottom: 0.8rem; font-size: 1.1rem;">
+        Key Projects:
+       </h4>
+       <div style="margin-left: 1rem;">
+        <h5 style="color: rgba(255, 255, 255, 0.85); font-style: italic; margin-bottom: 0.5rem; margin-top: 1rem;">
+         ruh.ai
+        </h5>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1rem; line-height: 1.8;">
+         <li style="margin-bottom: 0.5rem;">
+          Developed scalable frontend architecture implementing Redux and Zustand for efficient state management and optimized application performance
+         </li>
+         <li style="margin-bottom: 0.5rem;">
+          Designed and implemented responsive user interfaces with advanced animations using Tailwind CSS, enhancing user engagement and visual appeal
+         </li>
+         <li style="margin-bottom: 0.5rem;">
+          Integrated Strapi CMS to enable dynamic content management, API creation, and seamless content delivery across the platform
+         </li>
+         <li style="margin-bottom: 0.5rem;">
+          Collaborated with design teams using Canva and 3D design tools to create and implement visually compelling UI/UX elements
+         </li>
+        </ul>
+        <h5 style="color: rgba(255, 255, 255, 0.85); font-style: italic; margin-bottom: 0.5rem; margin-top: 1rem;">
+         ruhapp
+        </h5>
+        <ul style="margin-left: 1.5rem; line-height: 1.8;">
+         <li style="margin-bottom: 0.5rem;">
+          Implemented Mixpanel analytics integration to track user behavior, generate actionable insights, and support data-driven decision making
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
     </div>
    </div>
   </section>
   <section class="section fade-in" id="skills">
    <h2 class="section-title">
-    Skills &amp; Expertise
+    Technical Skills
    </h2>
    <div class="skills-grid">
     <div class="skill-category">
      <i class="fas fa-code">
      </i>
      <h3>
-      Programming Languages
+      Languages
      </h3>
      <p>
-      Python, JavaScript, TypeScript, HTML, CSS, Java, C++
-     </p>
-    </div>
-    <div class="skill-category">
-     <i class="fas fa-brain">
-     </i>
-     <h3>
-      AI &amp; Machine Learning
-     </h3>
-     <p>
-      Google Gemini, NLP, Intelligent Agent Systems, Model Context Protocol, AI Chatbots, Resume Parsing
+      Proficient in <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>Java</strong>, and <strong>C++</strong> for building robust and scalable applications
      </p>
     </div>
     <div class="skill-category">
      <i class="fas fa-globe">
      </i>
      <h3>
-      Web Development
+      Frontend Frameworks
      </h3>
      <p>
-      React, Node.js, Express.js, RESTful APIs, React Query, React Hook Form, Responsive Design
+      Expertise in <strong>React</strong> and <strong>Next.js</strong> for building modern, performant web applications with server-side rendering
+     </p>
+    </div>
+    <div class="skill-category">
+     <i class="fas fa-cogs">
+     </i>
+     <h3>
+      State Management
+     </h3>
+     <p>
+      Skilled in <strong>Redux</strong> and <strong>Zustand</strong> for efficient application state management and data flow optimization
+     </p>
+    </div>
+    <div class="skill-category">
+     <i class="fas fa-paint-brush">
+     </i>
+     <h3>
+      Styling &amp; UI
+     </h3>
+     <p>
+      Proficient in <strong>Tailwind CSS</strong> for rapid UI development with utility-first styling and responsive design
+     </p>
+    </div>
+    <div class="skill-category">
+     <i class="fas fa-tools">
+     </i>
+     <h3>
+      Tools &amp; Platforms
+     </h3>
+     <p>
+      Experienced with <strong>Git</strong>, <strong>Node.js</strong>, <strong>Jira</strong>, <strong>Mixpanel</strong>, <strong>Strapi</strong>, <strong>Google Gemini</strong>, and <strong>MCP</strong> for development, collaboration, and analytics
+     </p>
+    </div>
+    <div class="skill-category">
+     <i class="fas fa-palette">
+     </i>
+     <h3>
+      Design Tools
+     </h3>
+     <p>
+      Proficient in <strong>Canva</strong> and <strong>3D Designing</strong> tools for creating visually compelling UI/UX elements
      </p>
     </div>
     <div class="skill-category">
      <i class="fas fa-database">
      </i>
      <h3>
-      Databases &amp; Tools
+      Databases
      </h3>
      <p>
-      MySQL, MongoDB, Git, GitHub, Mongoose, Agile Development
+      Experienced with <strong>MySQL</strong> and <strong>MongoDB</strong> for data storage and management in full-stack applications
      </p>
     </div>
     <div class="skill-category">
-     <i class="fas fa-cloud">
+     <i class="fas fa-brain">
      </i>
      <h3>
-      Cloud &amp; DevOps
+      Concepts
      </h3>
      <p>
-      GitHub Pages, Render, CI/CD, Cloud Deployment, Docker Basics, Version Control
-     </p>
-    </div>
-    <div class="skill-category">
-     <i class="fas fa-mobile-alt">
-     </i>
-     <h3>
-      UI/UX &amp; Design
-     </h3>
-     <p>
-      Material-UI, CSS Animations, Flexbox, Grid, Modern UI Patterns, Accessibility, User Experience
+      Strong understanding of <strong>AI/ML</strong>, <strong>Web Development</strong>, <strong>API Integration</strong>, and <strong>Agile</strong> methodologies
      </p>
     </div>
    </div>
@@ -1029,91 +1557,41 @@
     <div class="project-card">
      <div class="project-header">
       <h3>
-       ModuMentor: AI Business Automation
+       ModuMentor: Agent-Mediated Business Process Automation
       </h3>
       <p class="project-tech">
-       Python • Google Gemini • MCP • AI Agents
+       ReactJS • NodeJS • Google Gemini-1.5-Flash • Intelligent Agent Systems • MCP
       </p>
      </div>
      <div class="project-body">
-      <p>
-       Revolutionary agent-mediated architecture for business process automation achieving 27% higher accuracy and 73% enhanced reliability. Orchestrates five business tools with intelligent decision-making.
+      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+       Developed an intelligent agent-mediated system using ReactJS and Node.js with Google Gemini-1.5-Flash, achieving <strong style="color: rgba(255, 255, 255, 0.95);">27% higher accuracy</strong> and <strong style="color: rgba(255, 255, 255, 0.95);">73% enhanced reliability</strong>. Implemented multi-layered architecture orchestrating five business tools, validated on <strong style="color: rgba(255, 255, 255, 0.95);">1,500+ queries</strong>. Leveraged Model Context Protocol (MCP) for automated workflows.
       </p>
       <div class="project-links">
-       <a class="project-btn" href="https://frontend-modu.onrender.com/" target="_blank">
-        <i class="fas fa-external-link-alt">
-        </i>
-        Live Demo
-       </a>
-       <a class="project-btn" href="https://github.com/VaishaleeSingh/frontendModu1" target="_blank">
-        <i class="fab fa-github">
-        </i>
-        Frontend GitHub
-       </a>
-       <a class="project-btn" href="https://github.com/VaishaleeSingh/agentModu1" target="_blank">
-        <i class="fab fa-github">
-        </i>
-        Agent GitHub
-       </a>
-       <a class="project-btn" href="https://github.com/VaishaleeSingh/serverModu1" target="_blank">
-        <i class="fab fa-github">
-        </i>
-        Backend GitHub
-       </a>
-      </div>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       Weather Forecast App
-      </h3>
-      <p class="project-tech">
-       JavaScript • HTML • CSS • Weather API
-      </p>
-     </div>
-     <div class="project-body">
-      <p>
-       Real-time weather application with dynamic data visualization, location-based predictions, and responsive design optimized for all devices.
-      </p>
-      <div class="project-links">
-       <a class="project-btn" href="https://github.com/VaishaleeSingh/WeatherForecast" target="_blank">
-        <i class="fab fa-github">
-        </i>
-        GitHub
-       </a>
-       <a class="project-btn" href="https://vaishaleesingh.github.io/WeatherForecast/" target="_blank">
-        <i class="fas fa-external-link-alt">
-        </i>
-        Live Demo
-       </a>
-      </div>
-     </div>
-    </div>
-    <div class="project-card">
-     <div class="project-header">
-      <h3>
-       Personal Portfolio
-      </h3>
-      <p class="project-tech">
-       HTML • CSS • JavaScript • GitHub Pages
-      </p>
-     </div>
-     <div class="project-body">
-      <p>
-       Modern, responsive portfolio website showcasing projects and skills with interactive elements, smooth animations, and cross-browser compatibility.
-      </p>
-      <div class="project-links">
-       <a class="project-btn" href="https://github.com/VaishaleeSingh/Portfolio" target="_blank">
-        <i class="fab fa-github">
-        </i>
-        GitHub
-       </a>
-       <a class="project-btn" href="https://vaishaleesingh.github.io/Portfolio/" target="_blank">
-        <i class="fas fa-external-link-alt">
-        </i>
-        Live Demo
-       </a>
+       <div class="project-links-row">
+        <a class="project-btn" href="https://frontend-modu.onrender.com/" target="_blank">
+         <i class="fas fa-globe">
+         </i>
+         Live Demo
+        </a>
+       </div>
+       <div class="project-links-row">
+        <a class="project-btn" href="https://github.com/VaishaleeSingh/frontendModu1" target="_blank">
+         <i class="fab fa-github">
+         </i>
+         Frontend
+        </a>
+        <a class="project-btn" href="https://github.com/VaishaleeSingh/agentModu1" target="_blank">
+         <i class="fab fa-github">
+         </i>
+         Agent
+        </a>
+        <a class="project-btn" href="https://github.com/VaishaleeSingh/serverModu1" target="_blank">
+         <i class="fab fa-github">
+         </i>
+         Backend
+        </a>
+       </div>
       </div>
      </div>
     </div>
@@ -1123,57 +1601,199 @@
        Digital Recruitment Management System
       </h3>
       <p class="project-tech">
-       React 19 • TypeScript • Node.js • MongoDB • Material-UI
+       React 19 • TypeScript • Node.js • Express.js • MongoDB • Material-UI • JWT • React Query • React Hook Form • Mongoose
       </p>
      </div>
      <div class="project-body">
-      <p>
-       Full-stack MERN application for end-to-end recruitment management, integrated with AI-based resume parsing and analytics.
+      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+       Engineered a full-stack MERN application using React 19, TypeScript, Node.js, Express.js, and MongoDB, streamlining the recruitment pipeline. Implemented AI-powered resume parsing, intelligent chatbot, and real-time analytics dashboard. Features include job posting management, ATS, automated interview scheduling, secure file uploads, and email notifications. Built with TypeScript, Material-UI, JWT authentication, and React Query.
       </p>
       <div class="project-links">
-       <a class="project-btn" href="https://github.com/VaishaleeSingh/frontend_DR" target="_blank">
-        <i class="fab fa-github">
-        </i>
-        Frontend GitHub
-       </a>
-       <a class="project-btn" href="https://github.com/VaishaleeSingh/backend_DR" target="_blank">
-        <i class="fab fa-github">
-        </i>
-        Backend GitHub
-       </a>
-       <a class="project-btn" href="https://frontend-dr-od6c.onrender.com/" target="_blank">
-        <i class="fas fa-external-link-alt">
-        </i>
-        Live Demo
-       </a>
+       <div class="project-links-row">
+        <a class="project-btn" href="https://frontend-dr-od6c.onrender.com/" target="_blank">
+         <i class="fas fa-globe">
+         </i>
+         Live Demo
+        </a>
+       </div>
+       <div class="project-links-row">
+        <a class="project-btn" href="https://github.com/VaishaleeSingh/frontend_DR" target="_blank">
+         <i class="fab fa-github">
+         </i>
+         Frontend
+        </a>
+        <a class="project-btn" href="https://github.com/VaishaleeSingh/backend_DR" target="_blank">
+         <i class="fab fa-github">
+         </i>
+         Backend
+        </a>
+       </div>
       </div>
      </div>
     </div>
     <div class="project-card">
      <div class="project-header">
       <h3>
-       HTML/CSS Tribute Project
+       Hunting Coder: Full-Stack Blog Platform
       </h3>
       <p class="project-tech">
-       HTML • CSS • Responsive Design
+       Next.js 16 • React 19 • TypeScript • Redux Toolkit • Tailwind CSS • Node.js • RESTful APIs
       </p>
      </div>
      <div class="project-body">
-      <p>
-       Responsive tribute webpage using CSS Grid and Flexbox. Demonstrates modern UI design with accessibility support.
+      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+       Developed a full-stack blog platform using Next.js 16 and React 19 with dynamic blog rendering, advanced search, and interactive contact form. Implemented server-side API routes with file-based JSON storage. Built responsive UI with dark/light theme using Redux Toolkit. Leveraged SSG for optimized pages with dynamic routing, reading time calculations, and performance optimizations. Created type-safe components with TypeScript and Tailwind CSS.
       </p>
       <div class="project-links">
-       <a class="project-btn" href="https://github.com/VaishaleeSingh/TributePage" target="_blank">
-        <i class="fab fa-github">
-        </i>
-        GitHub
-       </a>
-       <a class="project-btn" href="https://vaishaleesingh.github.io/TributePage/" target="_blank">
-        <i class="fas fa-external-link-alt">
-        </i>
-        Live Demo
-       </a>
+       <div class="project-links-row">
+        <a class="project-btn" href="https://hunting-coders.netlify.app/" target="_blank">
+         <i class="fas fa-globe">
+         </i>
+         Live Demo
+        </a>
+       </div>
+       <div class="project-links-row">
+        <a class="project-btn" href="https://github.com/VaishaleeSingh/Hunting-Coders-" target="_blank">
+         <i class="fab fa-github">
+         </i>
+         GitHub
+        </a>
+       </div>
       </div>
+     </div>
+    </div>
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       Weather Forecasting Application
+      </h3>
+      <p class="project-tech">
+       JavaScript • HTML • CSS • Weather API
+      </p>
+     </div>
+     <div class="project-body">
+      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+       Developed a real-time weather forecasting application with third-party API integration and responsive design. Implemented dynamic data visualization with interactive charts for weather metrics and forecasts. Built location-based prediction system with geolocation support for accurate, location-specific forecasts and alerts.
+      </p>
+      <div class="project-links">
+       <div class="project-links-row">
+        <a class="project-btn" href="https://vaishaleesingh.github.io/WeatherForecast/" target="_blank">
+         <i class="fas fa-globe">
+         </i>
+         Live Demo
+        </a>
+       </div>
+       <div class="project-links-row">
+        <a class="project-btn" href="https://github.com/VaishaleeSingh/WeatherForecast" target="_blank">
+         <i class="fab fa-github">
+         </i>
+         GitHub
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       TextForge: Text Utility & Analyzer Web Application
+      </h3>
+      <p class="project-tech">
+       React 19 • React Router DOM • JavaScript (ES6+) • CSS3 • Bootstrap 5 • Intersection Observer API • File API • Clipboard API
+      </p>
+     </div>
+     <div class="project-body">
+      <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
+       Developed a comprehensive text analysis and manipulation web application using React 19 with real-time transformations, analytics, and file operations. Implemented advanced text analytics including word/character counting, reading time estimation, and word frequency analysis. Built 7+ text transformation functions with instant preview. Created dynamic theme system with 8 customizable themes and localStorage persistence. Developed scroll-triggered animations using Intersection Observer API and custom hooks. Implemented file operations using File API and Clipboard API. Designed responsive UI with Bootstrap 5, CSS Grid, and Flexbox.
+      </p>
+      <div class="project-links">
+       <div class="project-links-row">
+        <a class="project-btn" href="https://dreamy-kulfi-20d862.netlify.app/" target="_blank">
+         <i class="fas fa-globe">
+         </i>
+         Live Demo
+        </a>
+       </div>
+       <div class="project-links-row">
+        <a class="project-btn" href="https://github.com/VaishaleeSingh/TextForge.git" target="_blank">
+         <i class="fab fa-github">
+         </i>
+         GitHub
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="section fade-in" id="additional-info">
+   <h2 class="section-title">
+    Additional Information
+   </h2>
+   <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       <i class="fas fa-users" style="margin-right: 0.5rem;"></i>
+       Soft Skills
+      </h3>
+     </div>
+     <div class="project-body">
+      <p style="line-height: 1.8;">
+       Problem-Solving, Team Collaboration, Agile Methodology, Communication, Adaptability, Attention to Detail
+      </p>
+     </div>
+    </div>
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       <i class="fas fa-language" style="margin-right: 0.5rem;"></i>
+       Languages
+      </h3>
+     </div>
+     <div class="project-body">
+      <p style="line-height: 1.8;">
+       English (Fluent), Hindi (Native)
+      </p>
+     </div>
+    </div>
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       <i class="fas fa-tasks" style="margin-right: 0.5rem;"></i>
+       Work Methodology
+      </h3>
+     </div>
+     <div class="project-body">
+      <p style="line-height: 1.8;">
+       Agile/Scrum, Version Control (Git), Code Reviews, CI/CD Practices
+      </p>
+     </div>
+    </div>
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       <i class="fas fa-heart" style="margin-right: 0.5rem;"></i>
+       Interests
+      </h3>
+     </div>
+     <div class="project-body">
+      <p style="line-height: 1.8;">
+       Frontend Architecture, UI/UX Design, Open-source Contributions, AI/ML Research, Emerging Web Technologies
+      </p>
+     </div>
+    </div>
+    <div class="project-card">
+     <div class="project-header">
+      <h3>
+       <i class="fas fa-bullseye" style="margin-right: 0.5rem;"></i>
+       Professional Focus
+      </h3>
+     </div>
+     <div class="project-body">
+      <p style="line-height: 1.8;">
+       Building Scalable Web Applications, Performance Optimization, User Experience Enhancement
+      </p>
      </div>
     </div>
    </div>
@@ -1190,6 +1810,11 @@
      I'm always open to discussing new opportunities, innovative ideas, and potential collaborations.
     </p>
     <div class="contact-links">
+     <a class="contact-link" href="mailto:vaishalee.singh@s.amity.edu">
+      <i class="fas fa-envelope">
+      </i>
+      vaishalee.singh@s.amity.edu
+     </a>
      <a class="contact-link" href="mailto:vaishalisinghsln5@gmail.com">
       <i class="fas fa-envelope">
       </i>
@@ -1209,6 +1834,11 @@
       <i class="fab fa-github">
       </i>
       GitHub Portfolio
+     </a>
+     <a class="contact-link" href="https://vaishaleesingh.github.io/Portfolio/" target="_blank">
+      <i class="fas fa-globe">
+      </i>
+      Portfolio
      </a>
     </div>
    </div>
