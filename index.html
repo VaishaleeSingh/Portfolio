@@ -7,6 +7,7 @@
     <title>
         Vaishalee Singh - Portfolio
     </title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <style>
         * {
@@ -16,12 +17,16 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6, .logo {
+            font-family: 'Outfit', sans-serif;
         }
 
         * {
@@ -1255,6 +1260,34 @@
             }
         }
 
+        /* Skills Badges styling */
+        .skills-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 550;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(5px);
+        }
+
+        .skill-badge:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.35);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
         /* Scroll Animation */
         .fade-in {
             opacity: 0;
@@ -1305,7 +1338,7 @@
                     <a href="#education" onclick="closeMobileMenu()">
                         <i class="fas fa-graduation-cap">
                         </i>
-                        Education
+                        Education &amp; Certs
                     </a>
                 </li>
                 <li>
@@ -1352,7 +1385,7 @@
                 Vaishalee Singh
             </h1>
             <p class="subtitle">
-                Frontend Developer | React & Next.js Specialist | Building Scalable Web Applications
+                Software Developer | Full-Stack &amp; AI-Agent Systems | React, Next.js, Node.js &amp; FastAPI
             </p>
             <div class="cta-buttons">
                 <a class="btn btn-primary" href="#projects">
@@ -1374,7 +1407,7 @@
         </h2>
         <div class="about-content">
             <div class="profile-img">
-                <img alt="Vaishalee Singh - Computer Science Engineering Graduate" loading="lazy"
+                <img alt="Vaishalee Singh - Software Developer" loading="lazy"
                     src="Vaishalee.jpeg" />
             </div>
             <div class="about-text">
@@ -1382,29 +1415,24 @@
                     Hello! I'm Vaishalee Singh
                 </h3>
                 <p>
-                    Passionate Frontend Developer with hands-on experience in React, Next.js, and modern state
-                    management solutions (Redux, Zustand). Currently working as Frontend Intern at Rapid Innovation,
-                    developing scalable web applications with responsive designs, animations, and analytics integration.
+                    I am a Software Developer skilled in building scalable full-stack applications using React.js, Next.js, Node.js, FastAPI, and modern web technologies. I have a strong foundation in frontend architecture, API integration, AI-powered agent systems, state management, and developing real-world, production-ready applications.
                 </p>
                 <p>
-                    I specialize in building modern frontend architectures using Next.js 16 and React 19, implementing
-                    state management with Redux and Zustand, creating responsive UIs with Tailwind CSS, and integrating
-                    analytics tools like Mixpanel for data-driven insights. My work includes developing scalable
-                    frontend solutions, working with Strapi CMS for content management, and creating visually compelling
-                    UI/UX elements.
+                    I have professional experience working as a Software Developer at Rapid Innovation (RUH AI), where I designed and built highly performant frontend architectures, set up Mixpanel analytics for user tracking, integrated Strapi CMS, and worked on modular FastAPI backend services.
                 </p>
                 <p>
-                    Seeking opportunities to leverage expertise in frontend technologies, contribute to innovative
-                    projects, and continue growing in a collaborative, technology-driven environment.
+                    I am passionate about building impactful products, engineering robust AI agent workflows (using AutoGen and Gemini APIs), and solving complex problems through technology.
                 </p>
             </div>
         </div>
     </section>
     <section class="section fade-in" id="education">
         <h2 class="section-title">
-            Education
+            Education &amp; Certifications
         </h2>
-        <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+        
+        <h3 class="subsection-title" style="color: white; margin-bottom: 1.5rem; font-size: 1.5rem; border-left: 4px solid rgba(255,255,255,0.6); padding-left: 12px; margin-top: 1rem;">Education</h3>
+        <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
             <div class="project-card">
                 <div class="project-header">
                     <h3>
@@ -1418,10 +1446,10 @@
                     <p style="margin-bottom: 1rem;">
                         <strong>Amity University Uttar Pradesh</strong>
                         <br />
-                        <span style="opacity: 0.9;">2026 | CGPA: 8.22/10</span>
+                        <span style="opacity: 0.9;">2022 – 2026 | CGPA: 8.22/10</span>
                     </p>
                     <p style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.6;">
-                        <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Web Development, AI/ML,
+                        <strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, Web Development, AI/ML,
                         Database Systems, Object-Oriented Programming, Software Engineering, Computer Networks,
                         Operating Systems
                     </p>
@@ -1462,6 +1490,25 @@
                 </div>
             </div>
         </div>
+
+        <h3 class="subsection-title" style="color: white; margin-bottom: 1.5rem; font-size: 1.5rem; border-left: 4px solid rgba(255,255,255,0.6); padding-left: 12px; margin-top: 1rem;">Certifications</h3>
+        <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>
+                        Frontend Developer Certification
+                    </h3>
+                    <p class="project-tech">
+                        Micro1 • 2026
+                    </p>
+                </div>
+                <div class="project-body">
+                    <p style="line-height: 1.8; color: rgba(255, 255, 255, 0.9);">
+                        Professional certification validating expertise in frontend engineering, focusing on React.js, Next.js, TypeScript, state management, and modern responsive design best practices.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="section fade-in" id="experience">
         <h2 class="section-title">
@@ -1471,52 +1518,33 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>
-                        Frontend Intern
+                        Software Developer
                     </h3>
                     <p class="project-tech">
-                        Rapid Innovation | Nov 2025 to Current
+                        Rapid Innovation (RUH AI) | Nov 2025 – May 2026
                     </p>
                 </div>
                 <div class="project-body">
-                    <div style="margin-bottom: 1.5rem;">
-                        <h4 style="color: rgba(255, 255, 255, 0.95); margin-bottom: 0.8rem; font-size: 1.1rem;">
-                            Key Projects:
-                        </h4>
-                        <div style="margin-left: 1rem;">
-                            <h5
-                                style="color: rgba(255, 255, 255, 0.85); font-style: italic; margin-bottom: 0.5rem; margin-top: 1rem;">
-                                RUH.AI
-                            </h5>
-                            <ul style="margin-left: 1.5rem; margin-bottom: 1rem; line-height: 1.8;">
-                                <li style="margin-bottom: 0.5rem;">
-                                    Developed scalable frontend architecture implementing Redux and Zustand for
-                                    efficient state management and optimized application performance
-                                </li>
-                                <li style="margin-bottom: 0.5rem;">
-                                    Designed and implemented responsive user interfaces with advanced animations using
-                                    Tailwind CSS, enhancing user engagement and visual appeal
-                                </li>
-                                <li style="margin-bottom: 0.5rem;">
-                                    Integrated Strapi CMS to enable dynamic content management, API creation, and
-                                    seamless content delivery across the platform
-                                </li>
-                                <li style="margin-bottom: 0.5rem;">
-                                    Collaborated with design teams using Canva and 3D design tools to create and
-                                    implement visually compelling UI/UX elements
-                                </li>
-                            </ul>
-                            <h5
-                                style="color: rgba(255, 255, 255, 0.85); font-style: italic; margin-bottom: 0.5rem; margin-top: 1rem;">
-                                RUH APP
-                            </h5>
-                            <ul style="margin-left: 1.5rem; line-height: 1.8;">
-                                <li style="margin-bottom: 0.5rem;">
-                                    Implemented Mixpanel analytics integration to track user behavior, generate
-                                    actionable insights, and support data-driven decision making
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <ul style="margin-left: 1.5rem; line-height: 2; margin-top: 1rem; color: rgba(255, 255, 255, 0.95);">
+                        <li style="margin-bottom: 0.8rem;">
+                            Developed scalable full-stack applications using <strong>React.js</strong>, <strong>Next.js</strong>, REST APIs, and <strong>FastAPI</strong>.
+                        </li>
+                        <li style="margin-bottom: 0.8rem;">
+                            Built responsive user interfaces with optimized state management using <strong>Redux</strong> and <strong>Zustand</strong>.
+                        </li>
+                        <li style="margin-bottom: 0.8rem;">
+                            Implemented secure REST API integrations for frontend and backend communication.
+                        </li>
+                        <li style="margin-bottom: 0.8rem;">
+                            Developed backend services and reusable components to improve scalability and maintainability.
+                        </li>
+                        <li style="margin-bottom: 0.8rem;">
+                            Integrated <strong>Strapi CMS</strong> and <strong>Mixpanel analytics</strong> for content management and user behavior tracking.
+                        </li>
+                        <li style="margin-bottom: 0.8rem;">
+                            Collaborated with cross-functional teams in <strong>Agile/Scrum</strong> environments to deliver production-ready features.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -1527,93 +1555,77 @@
         </h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <i class="fas fa-code">
-                </i>
-                <h3>
-                    Languages
-                </h3>
-                <p>
-                    Proficient in <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>,
-                    <strong>Java</strong>, and <strong>C++</strong> for building robust and scalable applications
-                </p>
+                <i class="fas fa-code"></i>
+                <h3>Languages</h3>
+                <div class="skills-badges">
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">TypeScript</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">C++</span>
+                    <span class="skill-badge">Python</span>
+                </div>
             </div>
             <div class="skill-category">
-                <i class="fas fa-globe">
-                </i>
-                <h3>
-                    Frontend Frameworks
-                </h3>
-                <p>
-                    Expertise in <strong>React</strong> and <strong>Next.js</strong> for building modern, performant web
-                    applications with server-side rendering
-                </p>
+                <i class="fas fa-laptop-code"></i>
+                <h3>Frontend Architecture</h3>
+                <div class="skills-badges">
+                    <span class="skill-badge">React.js</span>
+                    <span class="skill-badge">Next.js</span>
+                    <span class="skill-badge">Redux</span>
+                    <span class="skill-badge">Zustand</span>
+                    <span class="skill-badge">Tailwind CSS</span>
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3</span>
+                </div>
             </div>
             <div class="skill-category">
-                <i class="fas fa-cogs">
-                </i>
-                <h3>
-                    State Management
-                </h3>
-                <p>
-                    Skilled in <strong>Redux</strong> and <strong>Zustand</strong> for efficient application state
-                    management and data flow optimization
-                </p>
+                <i class="fas fa-server"></i>
+                <h3>Backend &amp; Databases</h3>
+                <div class="skills-badges">
+                    <span class="skill-badge">Node.js</span>
+                    <span class="skill-badge">Express.js</span>
+                    <span class="skill-badge">FastAPI</span>
+                    <span class="skill-badge">REST APIs</span>
+                    <span class="skill-badge">MongoDB</span>
+                    <span class="skill-badge">MySQL</span>
+                </div>
             </div>
             <div class="skill-category">
-                <i class="fas fa-paint-brush">
-                </i>
-                <h3>
-                    Styling &amp; UI
-                </h3>
-                <p>
-                    Proficient in <strong>Tailwind CSS</strong> for rapid UI development with utility-first styling and
-                    responsive design
-                </p>
+                <i class="fas fa-brain"></i>
+                <h3>AI &amp; Automation</h3>
+                <div class="skills-badges">
+                    <span class="skill-badge">AutoGen</span>
+                    <span class="skill-badge">Gemini APIs</span>
+                    <span class="skill-badge">MCP Tools</span>
+                    <span class="skill-badge">Prompt Engineering</span>
+                    <span class="skill-badge">AI Agent Workflows</span>
+                    <span class="skill-badge">OpenAI APIs</span>
+                </div>
             </div>
             <div class="skill-category">
-                <i class="fas fa-tools">
-                </i>
-                <h3>
-                    Tools &amp; Platforms
-                </h3>
-                <p>
-                    Experienced with <strong>Git</strong>, <strong>Node.js</strong>, <strong>Jira</strong>,
-                    <strong>Mixpanel</strong>, <strong>Strapi</strong>, <strong>Google Gemini</strong>, and
-                    <strong>MCP</strong> for development, collaboration, and analytics
-                </p>
+                <i class="fas fa-tools"></i>
+                <h3>Developer Tools</h3>
+                <div class="skills-badges">
+                    <span class="skill-badge">Git</span>
+                    <span class="skill-badge">Vercel</span>
+                    <span class="skill-badge">Render</span>
+                    <span class="skill-badge">Jira</span>
+                    <span class="skill-badge">Mixpanel</span>
+                    <span class="skill-badge">Strapi</span>
+                    <span class="skill-badge">GitHub Copilot</span>
+                </div>
             </div>
             <div class="skill-category">
-                <i class="fas fa-palette">
-                </i>
-                <h3>
-                    Design Tools
-                </h3>
-                <p>
-                    Proficient in <strong>Canva</strong> and <strong>3D Designing</strong> tools for creating visually
-                    compelling UI/UX elements
-                </p>
-            </div>
-            <div class="skill-category">
-                <i class="fas fa-database">
-                </i>
-                <h3>
-                    Databases
-                </h3>
-                <p>
-                    Experienced with <strong>MySQL</strong> and <strong>MongoDB</strong> for data storage and management
-                    in full-stack applications
-                </p>
-            </div>
-            <div class="skill-category">
-                <i class="fas fa-brain">
-                </i>
-                <h3>
-                    Concepts
-                </h3>
-                <p>
-                    Strong understanding of <strong>AI/ML</strong>, <strong>Web Development</strong>, <strong>API
-                        Integration</strong>, and <strong>Agile</strong> methodologies
-                </p>
+                <i class="fas fa-lightbulb"></i>
+                <h3>Key Concepts</h3>
+                <div class="skills-badges">
+                    <span class="skill-badge">Data Structures &amp; Algorithms</span>
+                    <span class="skill-badge">OOP</span>
+                    <span class="skill-badge">JWT Authentication</span>
+                    <span class="skill-badge">API Integration</span>
+                    <span class="skill-badge">System Design</span>
+                    <span class="skill-badge">Agile Methodology</span>
+                </div>
             </div>
         </div>
     </section>
@@ -1625,25 +1637,21 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>
-                        ModuMentor: Agent-Mediated Business Process Automation
+                        ModuMentor: Multi-Agent AI Automation System
                     </h3>
                     <p class="project-tech">
-                        ReactJS • Node.js • Express.js • Google Gemini-1.5-Flash • Intelligent Agent Systems • MCP •
-                        RESTful APIs • Python • Environment Configuration
+                        AutoGen • Gemini 1.5 • FastAPI • Python • MCP Tools • React.js
                     </p>
                 </div>
                 <div class="project-body">
-                    <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
-                        Full-stack agent-mediated automation: ReactJS (Netlify), Node.js/Express.js REST API,
-                        Python/Flask agentic server with Google Gemini-1.5-Flash, achieving <strong
-                            style="color: rgba(255, 255, 255, 0.95);">27% higher accuracy</strong> and <strong
-                            style="color: rgba(255, 255, 255, 0.95);">73% enhanced reliability</strong>. MCP-based
-                        agentic server orchestrating Resend API, Google Sheets, Gmail, OpenWeather API, Tavily API.
-                        RESTful endpoints (/api/chat, /api/analyze, /api/tools, /api/health) deployed on multiple Render
-                        instances. Validated on <strong style="color: rgba(255, 255, 255, 0.95);">1,500+
-                            queries</strong> with configurable AI models, fast mode optimization, and Smithery MCP
-                        integration.
-                    </p>
+                    <ul style="margin-left: 1.2rem; margin-top: 0.5rem; margin-bottom: 1.5rem; line-height: 1.7; color: rgba(255,255,255,0.9); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.5rem;">Built an <strong>agentic AI system</strong> using AutoGen integrated with Gemini 1.5 as the core reasoning engine for intelligent task execution.</li>
+                        <li style="margin-bottom: 0.5rem;">Designed and orchestrated autonomous AI agents capable of understanding user requests and dynamically selecting actions.</li>
+                        <li style="margin-bottom: 0.5rem;">Integrated <strong>5 MCP tools</strong> including Tavily Web Search, Dictionary API, Gmail, Google Sheets, and Weather API for real-time information retrieval and workflow automation.</li>
+                        <li style="margin-bottom: 0.5rem;">Implemented tool-calling architecture enabling agents to execute multi-step tasks with contextual understanding.</li>
+                        <li style="margin-bottom: 0.5rem;">Developed backend APIs using <strong>FastAPI</strong> and Python for agent communication, tool orchestration, and workflow management.</li>
+                        <li style="margin-bottom: 0.5rem;">Improved system efficiency using asynchronous API handling and modular agent workflows.</li>
+                    </ul>
                     <div class="project-links">
                         <div class="project-links-row">
                             <a class="project-btn" href="https://modumentor-client.netlify.app/" target="_blank">
@@ -1678,18 +1686,21 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>
-                        TaskFlow: Professional Team Task Management System
+                        TaskFlow: Team Task Management Platform
                     </h3>
                     <p class="project-tech">
-                        React 18 • Node.js • Express.js • MongoDB • JWT • Lucide React • Vercel • Render
+                        React.js • Node.js • Express.js • MongoDB • JWT • RBAC • Tailwind CSS
                     </p>
                 </div>
                 <div class="project-body">
-                    <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
-                        Full-stack MERN task management platform with secure <strong style="color: rgba(255, 255, 255, 0.95);">JWT authentication</strong> and <strong style="color: rgba(255, 255, 255, 0.95);">RBAC</strong>. 
-                        Features a dynamic <strong style="color: rgba(255, 255, 255, 0.95);">Kanban board</strong>, real-time analytics dashboard, and advanced user assignment logic across multiple projects. 
-                        Built with a high-fidelity "Midnight Slate" design system, ensuring full <strong style="color: rgba(255, 255, 255, 0.95);">mobile responsiveness</strong> and optimized SPA routing for production stability on Vercel and Render.
-                    </p>
+                    <ul style="margin-left: 1.2rem; margin-top: 0.5rem; margin-bottom: 1.5rem; line-height: 1.7; color: rgba(255,255,255,0.9); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.5rem;">Developed a full-stack task management and collaboration platform for organizing projects and tracking team workflows.</li>
+                        <li style="margin-bottom: 0.5rem;">Built an interactive <strong>Kanban board</strong> with task stages including To Do, In Progress, Review, and Completed.</li>
+                        <li style="margin-bottom: 0.5rem;">Implemented <strong>JWT authentication</strong> and <strong>Role-Based Access Control (RBAC)</strong> for secure user and admin access.</li>
+                        <li style="margin-bottom: 0.5rem;">Developed REST APIs using Node.js and Express.js for task creation, assignment, and status updates.</li>
+                        <li style="margin-bottom: 0.5rem;">Integrated MongoDB for efficient task storage and real-time data synchronization.</li>
+                        <li style="margin-bottom: 0.5rem;">Designed responsive user interfaces using <strong>React.js</strong> and <strong>Tailwind CSS</strong> with optimized state management.</li>
+                    </ul>
                     <div class="project-links">
                         <div class="project-links-row">
                             <a class="project-btn" href="https://tech-task-management-fe.vercel.app/" target="_blank">
@@ -1718,21 +1729,21 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>
-                        Digital Recruitment Management System
+                        Digital Recruiter: AI-Powered Recruitment Management System
                     </h3>
                     <p class="project-tech">
-                        React 19 • TypeScript • Node.js • Express.js • MongoDB • Material-UI • JWT • React Query • React
-                        Hook Form • Mongoose
+                        React.js • TypeScript • Material UI • Node.js • Express.js • MongoDB • JWT
                     </p>
                 </div>
                 <div class="project-body">
-                    <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9);">
-                        Full-stack MERN application: React 19, TypeScript, Node.js, Express.js, MongoDB with RESTful API
-                        and JWT authentication. AI-powered resume parsing, intelligent chatbot, real-time analytics
-                        dashboard with React Query. Features: job posting management, ATS, automated interview
-                        scheduling, secure file uploads, email notifications. Built with TypeScript, Material-UI, React
-                        Hook Form, Mongoose.
-                    </p>
+                    <ul style="margin-left: 1.2rem; margin-top: 0.5rem; margin-bottom: 1.5rem; line-height: 1.7; color: rgba(255,255,255,0.9); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.5rem;">Developed a recruitment management platform to streamline candidate tracking and hiring workflows.</li>
+                        <li style="margin-bottom: 0.5rem;">Implemented resume management, candidate status tracking, interview scheduling, and application management features.</li>
+                        <li style="margin-bottom: 0.5rem;">Built secure <strong>JWT authentication</strong> and role-based access for recruiters and candidates.</li>
+                        <li style="margin-bottom: 0.5rem;">Developed REST APIs using Node.js and Express.js for candidate and recruitment operations.</li>
+                        <li style="margin-bottom: 0.5rem;">Built analytics dashboards for monitoring recruitment activities and hiring progress.</li>
+                        <li style="margin-bottom: 0.5rem;">Designed responsive user interfaces using <strong>React.js</strong>, <strong>TypeScript</strong>, and <strong>Material UI</strong>.</li>
+                    </ul>
                     <div class="project-links">
                         <div class="project-links-row">
                             <a class="project-btn" href="https://frontend-dr-od6c.onrender.com/" target="_blank">
@@ -1989,11 +2000,6 @@
                 I'm always open to discussing new opportunities, innovative ideas, and potential collaborations.
             </p>
             <div class="contact-links">
-                <a class="contact-link" href="mailto:vaishalee.singh@s.amity.edu">
-                    <i class="fas fa-envelope">
-                    </i>
-                    vaishalee.singh@s.amity.edu
-                </a>
                 <a class="contact-link" href="mailto:vaishalisinghsln5@gmail.com">
                     <i class="fas fa-envelope">
                     </i>
@@ -2007,12 +2013,12 @@
                 <a class="contact-link" href="https://www.linkedin.com/in/vaishalee-singh-934847254" target="_blank">
                     <i class="fab fa-linkedin">
                     </i>
-                    LinkedIn Profile
+                    LinkedIn
                 </a>
                 <a class="contact-link" href="https://github.com/VaishaleeSingh" target="_blank">
                     <i class="fab fa-github">
                     </i>
-                    GitHub Portfolio
+                    GitHub
                 </a>
                 <a class="contact-link" href="https://vaishaleesingh.github.io/Portfolio/" target="_blank">
                     <i class="fas fa-globe">
