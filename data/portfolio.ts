@@ -169,6 +169,22 @@ export const projects = [
     ] as ProjectLink[][],
   },
   {
+    title: "NeuroHR AI: Enterprise HRMS & AI Recruitment Platform",
+    tech: "Next.js 14 • TypeScript • Express.js • FastAPI • MongoDB • Groq (Llama 3.3) • Gemini • scikit-learn • Google OAuth • Render",
+    bullets: [
+      "Built a production HRMS with a 12-step Groq-first hiring pipeline: org knowledge base → grounded JD generation → multi-step resume SOP screening → 15-question AI voice interviews → human panel → offer accept/decline → employee onboarding.",
+      "Architected a dedicated FastAPI ML microservice (20+ endpoints) orchestrating Llama 3.3 70B for screening, interview evaluation, tailored question generation, and HR email synthesis with token budgeting, JSON schema enforcement, and Gemini Flash fallback.",
+      "Engineered KB-grounded JD generation: catalog markdown → Groq tech-stack extraction → must-have/nice-to-have skill mapping → 7-section job descriptions tied to real repo stacks instead of generic templates.",
+      "Implemented harness-style resume screening SOPs (10-step fresher / 8-step experienced) returning dimension scores, skill gaps, and human-escalation flags; auto-shortlist at ≥80% JD match with human-in-the-loop gates and no auto-reject.",
+      "Designed 5-dimension weighted interview evaluation (Technical, Problem Solving, Communication, Culture, Experience) with composite hiring score (80% resume + 20% interview) and per-candidate Groq question fallbacks when LLM JSON fails.",
+      "Deployed full stack on Netlify + Render with dual Gmail OAuth (HR + Agent), Google Calendar Meet scheduling, scikit-learn CSV training to .pkl artifacts, and synchronous offer/leave email delivery for serverless reliability.",
+    ],
+    links: [
+      [{ label: "Live Demo", href: "https://neurohrai.netlify.app/", icon: "fa-globe" }],
+      [{ label: "GitHub", href: "https://github.com/VaishaleeSingh/NeuroHr", icon: "fab fa-github" }],
+    ] as ProjectLink[][],
+  },
+  {
     title: "TaskFlow: Team Task Management Platform",
     tech: "React.js • Node.js • Express.js • MongoDB • JWT • RBAC • Tailwind CSS",
     bullets: [
