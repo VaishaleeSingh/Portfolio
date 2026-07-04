@@ -23,7 +23,7 @@ const heroItem = (delay: number) => ({
 export default function Hero() {
   return (
     <section
-      className="hero relative flex w-full scroll-mt-24 items-center justify-center px-4 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-32 md:px-8 md:pb-24 lg:px-10 xl:px-12"
+      className="hero relative flex w-full scroll-mt-24 items-center justify-center px-6 pb-10 pt-28 sm:px-8 sm:pb-12 sm:pt-32 md:px-10 md:pb-14 lg:px-12 xl:px-14"
       id="home"
     >
       <div className="hero-layout flex w-full flex-col items-center justify-center gap-7 text-center sm:gap-8 md:gap-10">
@@ -33,8 +33,8 @@ export default function Hero() {
           animate="show"
           variants={heroItem(0.15)}
         >
-          <i className="fas fa-user-circle" />
-          Interactive Portfolio Guide
+          <i className="fas fa-robot" />
+          AI Engineer · Full-Stack Developer
         </motion.div>
 
         <motion.h1
@@ -47,12 +47,12 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="subtitle max-w-2xl px-2 text-base leading-relaxed text-text-secondary sm:text-lg"
+          className="subtitle max-w-2xl text-base leading-relaxed text-text-secondary sm:text-lg"
           initial="hidden"
           animate="show"
           variants={heroItem(0.39)}
         >
-          Software Developer | Full-Stack &amp; AI-Powered Systems | React, Next.js, Node.js &amp; FastAPI
+          Building production-grade <strong>Generative AI systems</strong> — multi-agent platforms, RAG pipelines &amp; LLM applications — with Python, FastAPI, LangChain, LangGraph, React.js &amp; Next.js
         </motion.p>
 
         <motion.div
@@ -74,10 +74,4 @@ export default function Hero() {
             View Projects
           </ActionLink>
           <ActionLink variant="secondary" size="md" href="#contact" icon="fas fa-envelope" className="cta-btn">
-            Get In Touch
-          </ActionLink>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
+     

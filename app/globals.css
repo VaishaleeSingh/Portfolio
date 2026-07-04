@@ -1010,8 +1010,8 @@ width: 60px;
 }
 
 .about-content {
-padding: 2rem 1.5rem;
-gap: 1.5rem;
+padding: 1.25rem;
+gap: 1.25rem;
 }
 
 .about-text h3 {
@@ -1025,7 +1025,7 @@ line-height: 1.7;
 
 .skills-grid {
 grid-template-columns: 1fr;
-gap: 1.25rem;
+gap: 1rem;
 }
 
 .skill-category {
@@ -1046,7 +1046,7 @@ font-size: 3rem;
 .grid-info,
 .grid-education,
 .grid-certifications {
-gap: 1.25rem;
+gap: 1rem;
 }
 
 .projects-grid {
@@ -1054,7 +1054,15 @@ grid-template-columns: 1fr;
 }
 
 .project-card {
-border-radius: 15px;
+border-radius: 14px;
+}
+
+.project-header {
+padding: 1.125rem 1.25rem;
+}
+
+.project-body {
+padding: 1.125rem 1.25rem;
 }
 
 .cta-buttons {
@@ -1077,7 +1085,7 @@ gap: 1rem;
 }
 
 .contact-content {
-padding: 2rem 1.5rem;
+padding: 1.25rem;
 }
 
 .contact-link {
@@ -1104,6 +1112,25 @@ margin-bottom: 0.6rem;
 }
 }
 
+/* ── Mobile card side-margin guarantee ──────────────────────────── */
+/* Ensures every card has visible background on left & right         */
+@media (max-width: 640px) {
+.about-content,
+.skills-grid,
+.projects-grid,
+.grid-info,
+.grid-education,
+.contact-content {
+  margin-inline: 0.25rem;
+}
+
+/* Single project/skill/info card – extra nudge away from screen edge */
+.project-card,
+.skill-category {
+  border-radius: 14px;
+}
+}
+
 @media (max-width: 480px) {
 .hero h1 {
 font-size: 2rem;
@@ -1123,7 +1150,7 @@ padding: 0 1rem;
 }
 
 .about-content {
-padding: 1.5rem;
+padding: 1.25rem;
 }
 
 .profile-img {
@@ -1148,7 +1175,7 @@ padding: 1rem;
 }
 
 .contact-content {
-padding: 1.5rem;
+padding: 1.25rem;
 }
 
 .contact-link {
@@ -2412,46 +2439,4 @@ width: 100%;
 }
 
 .contact-links .contact-link-btn {
-display: inline-flex !important;
-align-items: center !important;
-justify-content: center !important;
-padding: 0.6875rem 1.25rem !important;
-min-width: 10.5rem;
-max-width: 100%;
-}
-
-.contact-links .action-btn-content {
-gap: 0.5rem;
-}
-
-.contact-links .action-btn-text {
-line-height: 1.2;
-}
-
-@media (max-width: 768px) {
-.hero {
-min-height: auto;
-padding-top: 6.5rem;
-padding-bottom: 3rem;
-}
-
-.btn {
-width: auto;
-max-width: 100%;
-}
-
-.project-btn {
-width: auto;
-}
-}
-
-@media (hover: none) and (pointer: coarse) {
-.btn,
-.project-btn,
-.action-btn,
-.nav-links a {
-min-height: 44px;
-min-width: unset;
-}
-}
-
+display: inline-flex 
