@@ -10,9 +10,9 @@ export const navLinks = [
 ] as const;
 
 export const aboutParagraphs = [
-  "I am a Software Developer skilled in building scalable full-stack applications using React.js, Next.js, Node.js, FastAPI, and modern web technologies. I have strong expertise in frontend architecture, API integration, AI-powered systems, state management, and developing real-world, production-ready applications.",
-  "I am currently a Software Developer at Take U Forward, building scalable, high-performance web applications with React.js, Next.js, and TypeScript. Previously at Rapid Innovation (RUH AI), I developed full-stack solutions, integrated Strapi CMS and Mixpanel analytics, and built modular FastAPI backend services.",
-  "I am passionate about building impactful products and solving complex problems through technology — from AI agent workflows with AutoGen and Gemini APIs to performant full-stack platforms used at scale.",
+  "AI Engineer and full-stack developer specializing in production-grade Generative AI systems — multi-agent platforms, RAG pipelines, and LLM applications.",
+  "I design and ship end-to-end intelligent systems with Python, FastAPI, LangChain, LangGraph, and agentic AI frameworks, backed by vector databases, semantic search, and event-driven infrastructure (Kafka, Redis).",
+  "Equally strong across the modern web stack (React.js, Next.js, Node.js), and comfortable owning features from architecture through cloud deployment and observability in Agile teams.",
 ];
 
 export const education = [
@@ -49,83 +49,85 @@ export const certifications = [
 
 export const experiences = [
   {
-    role: "Software Developer",
+    role: "Software Developer Intern",
     company: "Take U Forward",
-    period: "June 2026 – Present",
+    period: "Jun 2026 – Present",
     bullets: [
-      "Developing scalable and high-performance web applications using React.js, Next.js, TypeScript, and modern frontend technologies.",
-      "Building reusable UI components and improving application architecture for better scalability and maintainability.",
-      "Working on feature development, API integrations, debugging, and performance optimization.",
-      "Collaborating with engineering teams to deliver production-ready software solutions following best development practices.",
+      "Build and maintain production-scale apps in React.js, Next.js, TypeScript, and Node.js on a modular, component-driven architecture.",
+      "Integrate LLM-powered features into product surfaces — prompt-engineered flows and API-backed AI assistance — to enhance functionality.",
+      "Own complex Git workflows end to end — feature branching, interactive rebasing, cherry-picking, conflict resolution, and release syncing.",
+      "Improve performance through optimized API integrations, reusable component design, and targeted production debugging in Linux environments.",
     ],
   },
   {
-    role: "Software Developer",
+    role: "Software Developer Intern",
     company: "Rapid Innovation (RUH AI)",
     period: "Nov 2025 – May 2026",
     bullets: [
-      "Developed scalable full-stack applications using React.js, Next.js, REST APIs, and FastAPI.",
-      "Built responsive user interfaces with optimized state management using Redux and Zustand.",
-      "Implemented secure REST API integrations for frontend and backend communication.",
-      "Developed backend services and reusable components to improve scalability and maintainability.",
-      "Integrated Strapi CMS and Mixpanel analytics for content management and user behavior tracking.",
-      "Collaborated with teams in Agile environments to deliver production-ready features.",
+      "Built production Generative AI systems — RAG pipelines and multi-agent platforms — using Python, FastAPI, LangChain, and LangGraph to orchestrate autonomous agent workflows.",
+      "Engineered semantic search over vector databases with tuned retrieval, chunking, and embedding strategies for accurate, low-latency LLM responses.",
+      "Designed agentic AI frameworks and applied prompt engineering to shape agent behavior, tool selection, and structured outputs across multi-step tasks.",
+      "Deployed services with Docker on GCP, using Kafka for event-driven messaging and Redis for caching and low-latency state.",
+      "Instrumented systems with SigNoz for distributed tracing, metrics, and production observability.",
+      "Delivered full-stack features with React.js, Next.js, REST APIs, Strapi CMS, Redux/Zustand, and Mixpanel analytics.",
     ],
   },
 ];
 
 export const skillCategories = [
-  { icon: "fa-code", title: "Languages", skills: ["JavaScript", "TypeScript", "Java", "C++", "Python"] },
   {
-    icon: "fa-laptop-code",
-    title: "Frontend",
-    skills: ["React.js", "Next.js", "Redux", "Zustand", "Tailwind CSS", "HTML5", "CSS3"],
-  },
-  {
-    icon: "fa-server",
-    title: "Backend & Databases",
-    skills: ["Node.js", "Express.js", "FastAPI", "REST APIs", "MongoDB", "MySQL"],
+    icon: "fa-code",
+    title: "Languages",
+    skills: ["Python", "JavaScript", "TypeScript", "Java", "C++"],
   },
   {
     icon: "fa-brain",
-    title: "AI & Automation",
+    title: "AI / GenAI",
     skills: [
-      "AutoGen",
-      "Gemini APIs",
-      "Groq",
-      "MCP Tools",
-      "LLM Orchestration",
-      "Multi-Agent Systems",
+      "LLMs",
       "RAG",
-      "Embeddings",
-      "Vector Search",
+      "AI Agents",
+      "Multi-Agent Systems",
+      "Agentic AI",
       "Prompt Engineering",
+      "LangChain",
+      "LangGraph",
+      "MCP",
+      "Semantic Search",
+      "Vector Retrieval",
+      "Vector Databases",
       "OpenAI APIs",
-      "SSE Streaming",
+      "Gemini 1.5",
+      "Llama 3.3 (Groq)",
+      "NLP",
+      "scikit-learn",
+      "Model Evaluation",
     ],
   },
   {
-    icon: "fa-chart-line",
-    title: "ML & Data",
-    skills: [
-      "scikit-learn",
-      "pandas",
-      "NLP",
-      "TF-IDF",
-      "Random Forest",
-      "Model Evaluation",
-      "Computer Vision APIs",
-    ],
+    icon: "fa-server",
+    title: "Backend",
+    skills: ["FastAPI", "Node.js", "REST APIs", "Express.js", "JWT Auth", "CORS", "WebSockets", "Microservices", "Kafka", "Redis"],
+  },
+  {
+    icon: "fa-laptop-code",
+    title: "Frontend",
+    skills: ["React.js", "Next.js", "Redux", "Zustand", "React Query", "Tailwind CSS", "Material UI", "HTML5", "CSS3"],
+  },
+  {
+    icon: "fa-database",
+    title: "Databases",
+    skills: ["MongoDB", "MySQL"],
   },
   {
     icon: "fa-tools",
-    title: "Developer Tools",
-    skills: ["Git", "Vercel", "Render", "Jira", "Mixpanel", "Strapi", "GitHub Copilot"],
+    title: "DevOps & Tools",
+    skills: ["Docker", "GCP", "CI/CD", "Git", "GitHub", "Linux", "Bash", "SigNoz", "Postman", "Jira", "Mixpanel", "Strapi", "Vercel", "Render", "Netlify"],
   },
   {
     icon: "fa-lightbulb",
-    title: "Key Concepts",
-    skills: ["Data Structures & Algorithms", "OOP", "JWT Authentication", "API Integration", "System Design", "Agile Methodology"],
+    title: "Foundations",
+    skills: ["DSA", "OOP", "System Design", "API Design", "Agile / Scrum", "Performance Optimization"],
   },
 ];
 
@@ -134,14 +136,11 @@ export type ProjectLink = { label: string; href: string; icon: string };
 export const projects = [
   {
     title: "ModuMentor: Multi-Agent AI Automation System",
-    tech: "AutoGen • Gemini 1.5 • FastAPI • Python • MCP Tools • React.js",
+    tech: "AutoGen • Gemini 1.5 • FastAPI • Python • MCP • React.js",
     bullets: [
-      "Built an agentic AI system using AutoGen integrated with Gemini 1.5 as the core reasoning engine for intelligent task execution.",
-      "Designed and orchestrated autonomous AI agents capable of understanding user requests and dynamically selecting actions.",
-      "Integrated 5 MCP tools including Tavily Web Search, Dictionary API, Gmail, Google Sheets, and Weather API for real-time information retrieval and workflow automation.",
-      "Implemented tool-calling architecture enabling agents to execute multi-step tasks with contextual understanding.",
-      "Developed backend APIs using FastAPI and Python for agent communication, tool orchestration, and workflow management.",
-      "Improved system efficiency using asynchronous API handling and modular agent workflows.",
+      "Built an agentic system with Gemini 1.5 as the reasoning engine, autonomously interpreting requests and selecting actions.",
+      "Integrated MCP tools — Web Search, Dictionary, Gmail, Google Sheets, Weather — behind FastAPI services orchestrating multi-agent communication.",
+      "Designed tool-calling architecture enabling agents to execute multi-step tasks with contextual understanding and modular agent workflows.",
     ],
     links: [
       [{ label: "Live Demo", href: "https://modumentor-client.netlify.app/", icon: "fa-globe" }],
@@ -154,14 +153,14 @@ export const projects = [
   },
   {
     title: "VisionForge: Full-Stack AI/ML Platform",
-    tech: "Next.js • React • TypeScript • Python • scikit-learn • MongoDB • Gemini • Groq • Hugging Face BGE • fal.ai • NextAuth",
+    tech: "Next.js • React.js • TypeScript • Python • scikit-learn • MongoDB • Gemini • Groq • Hugging Face BGE • fal.ai • NextAuth",
     bullets: [
-      "Built a full-stack AI/ML platform (Next.js, MongoDB) integrating multi-agent LLM workflows, RAG document Q&A, image generation, and executable model training across FinTech, security, manufacturing, and compliance use cases.",
-      "Designed multi-agent orchestration pipelines (Research, Content, Analysis, 9-step ML Planning) with Server-Sent Events streaming, step-level persistence, and Gemini/Groq fallback for rate limits.",
-      "Implemented real sklearn training via Node→Python subprocess (Random Forest for tabular, TF-IDF + Logistic Regression for NLP) with persisted metrics (accuracy, F1, CV scores) and joblib artifacts — separate from LLM-generated planning output.",
-      "Delivered six business ML presets (churn, loan default, fraud, CO emission risk, QA defect severity, phishing email) with CSV validation, dataset profiling, and AI-generated stakeholder summaries from training metrics.",
-      "Built an evaluated RAG pipeline: PDF upload → chunking → embeddings (Gemini / Hugging Face BGE) → vector retrieval → cited chat, plus precision@5 retrieval evaluation for deployment readiness.",
-      "Developed GenAI product features including streaming text studio, fal.ai image generation, resume–JD matching screener, and a searchable generation library with user auth and MongoDB persistence.",
+      "Built a full-stack AI/ML platform integrating multi-agent LLM workflows, RAG document Q&A, image generation, and executable model training across FinTech, security, manufacturing, and compliance use cases.",
+      "Designed multi-agent orchestration pipelines (Research, Content, Analysis, 9-step ML Planning) with SSE streaming, step-level persistence, and Gemini/Groq fallback for rate limits.",
+      "Engineered RAG pipeline: PDF upload → chunking → embeddings (Gemini / Hugging Face BGE) → vector retrieval → cited chat, with precision@5 retrieval evaluation for deployment readiness.",
+      "Implemented real sklearn training via Node→Python subprocess — Random Forest for tabular data, TF-IDF + Logistic Regression for NLP — persisting accuracy, F1, and CV scores as joblib artifacts.",
+      "Delivered six business ML presets (churn, loan default, fraud, emissions, QA defect, phishing) with CSV validation, dataset profiling, and AI-generated stakeholder summaries.",
+      "Built GenAI product features — streaming text studio, fal.ai image generation, resume–JD matching screener — with NextAuth user auth and MongoDB persistence.",
     ],
     links: [
       [{ label: "Live Demo", href: "https://visionforgevs.netlify.app/", icon: "fa-globe" }],
@@ -170,14 +169,13 @@ export const projects = [
   },
   {
     title: "NeuroHR AI: Enterprise HRMS & AI Recruitment Platform",
-    tech: "Next.js 14 • TypeScript • Express.js • FastAPI • MongoDB • Groq (Llama 3.3) • Gemini • scikit-learn • Google OAuth • Render",
+    tech: "Next.js 14 • TypeScript • Express.js • FastAPI • MongoDB • Llama 3.3 70B • scikit-learn • Google OAuth • Render",
     bullets: [
-      "Built a production HRMS with a 12-step Groq-first hiring pipeline: org knowledge base → grounded JD generation → multi-step resume SOP screening → 15-question AI voice interviews → human panel → offer accept/decline → employee onboarding.",
-      "Architected a dedicated FastAPI ML microservice (20+ endpoints) orchestrating Llama 3.3 70B for screening, interview evaluation, tailored question generation, and HR email synthesis with token budgeting, JSON schema enforcement, and Gemini Flash fallback.",
-      "Engineered KB-grounded JD generation: catalog markdown → Groq tech-stack extraction → must-have/nice-to-have skill mapping → 7-section job descriptions tied to real repo stacks instead of generic templates.",
-      "Implemented harness-style resume screening SOPs (10-step fresher / 8-step experienced) returning dimension scores, skill gaps, and human-escalation flags; auto-shortlist at ≥80% JD match with human-in-the-loop gates and no auto-reject.",
-      "Designed 5-dimension weighted interview evaluation (Technical, Problem Solving, Communication, Culture, Experience) with composite hiring score (80% resume + 20% interview) and per-candidate Groq question fallbacks when LLM JSON fails.",
-      "Deployed full stack on Netlify + Render with dual Gmail OAuth (HR + Agent), Google Calendar Meet scheduling, scikit-learn CSV training to .pkl artifacts, and synchronous offer/leave email delivery for serverless reliability.",
+      "Architected a Groq-first AI/ML microservice in FastAPI exposing 20+ APIs for resume screening, JD generation, AI interviews, and candidate evaluation.",
+      "Engineered LLM orchestration on Llama 3.3 70B with structured JSON outputs, token budgeting, retry handling, and Gemini Flash fallback.",
+      "Built RAG knowledge-base pipelines with vector retrieval, plus scikit-learn models (Random Forest, Gradient Boosting, MLP) tuned via GridSearchCV.",
+      "Implemented harness-style resume screening SOPs returning dimension scores, skill gaps, and human-escalation flags with auto-shortlist at ≥80% JD match.",
+      "Designed 5-dimension weighted interview evaluation with composite hiring score (80% resume + 20% interview) and per-candidate question fallbacks.",
     ],
     links: [
       [{ label: "Live Demo", href: "https://neurohrai.netlify.app/", icon: "fa-globe" }],
@@ -186,14 +184,12 @@ export const projects = [
   },
   {
     title: "TaskFlow: Team Task Management Platform",
-    tech: "React.js • Node.js • Express.js • MongoDB • JWT • RBAC • Tailwind CSS",
+    tech: "React.js • Redux • Node.js • Express.js • MongoDB • JWT • CORS",
     bullets: [
-      "Developed a full-stack task management and collaboration platform for organizing projects and tracking team workflows.",
-      "Built an interactive Kanban board with task stages including To Do, In Progress, Review, and Completed.",
-      "Implemented JWT authentication and Role-Based Access Control (RBAC) for secure user and admin access.",
-      "Developed REST APIs using Node.js and Express.js for task creation, assignment, and status updates.",
-      "Integrated MongoDB for efficient task storage and real-time data synchronization.",
-      "Designed responsive user interfaces using React.js and Tailwind CSS with optimized state management.",
+      "Built a responsive React.js frontend with drag-and-drop Kanban boards and Redux-managed global state for real-time task lifecycle updates.",
+      "Designed RESTful APIs in Node.js/Express.js for full CRUD on tasks, boards, and users, with modular controllers and middleware.",
+      "Modeled tasks, boards, and users in MongoDB with indexed schemas and relational references for efficient queries.",
+      "Implemented JWT-based authentication, bcrypt password hashing, CORS-secured endpoints, and role-based access control for multi-user collaboration.",
     ],
     links: [
       [{ label: "Live Demo", href: "https://tech-task-management-fe.vercel.app/", icon: "fa-globe" }],
@@ -207,12 +203,10 @@ export const projects = [
     title: "Digital Recruiter: AI-Powered Recruitment Management System",
     tech: "React.js • TypeScript • Material UI • Node.js • Express.js • MongoDB • JWT",
     bullets: [
-      "Developed a recruitment management platform to streamline candidate tracking and hiring workflows.",
-      "Implemented resume management, candidate status tracking, interview scheduling, and application management features.",
-      "Built secure JWT authentication and role-based access for recruiters and candidates.",
-      "Developed REST APIs using Node.js and Express.js for candidate and recruitment operations.",
-      "Built analytics dashboards for monitoring recruitment activities and hiring progress.",
-      "Designed responsive user interfaces using React.js, TypeScript, and Material UI.",
+      "Built a TypeScript + React.js interface with Material UI for candidate tracking, resume management, interview scheduling, and analytics dashboards.",
+      "Developed REST APIs in Node.js/Express.js to manage candidates, job postings, and interview workflows with a clean, layered architecture.",
+      "Persisted candidate profiles, applications, and scheduling data in MongoDB with structured schemas and query optimization.",
+      "Secured the platform with JWT authentication and role-based access control across recruiter and admin roles.",
     ],
     links: [
       [{ label: "Live Demo", href: "https://frontend-dr-od6c.onrender.com/", icon: "fa-globe" }],
@@ -224,13 +218,13 @@ export const projects = [
   },
   {
     title: "Hunting Coder: Full-Stack Blog Platform",
-    tech: "Next.js 16 • React 19 • TypeScript • Redux Toolkit • Tailwind CSS • JSON Database",
+    tech: "Next.js • React.js • TypeScript • Redux Toolkit • Tailwind CSS • Next.js API Routes",
     bullets: [
-      "Developed a full-stack blog platform using Next.js 16 and React 19 with dynamic markdown rendering and advanced text search.",
-      "Implemented Static Site Generation (SSG) and dynamic routing for sub-millisecond page transitions and optimized SEO.",
-      "Configured file-based JSON storage on the server with API endpoints for user feedback and post read-time estimations.",
-      "Managed global UI state with Redux Toolkit for theme configuration (dark/light mode) and interactive filters.",
-      "Built fluid utility-first layout using Tailwind CSS with smooth transition micro-animations.",
+      "Built a full-stack Next.js blog with dynamic markdown rendering, advanced full-text search, and category filtering.",
+      "Leveraged SSG and dynamic routing for sub-millisecond page transitions and SEO-optimized metadata.",
+      "Implemented file-based JSON storage via Next.js API routes for user feedback submission and post read-time estimates.",
+      "Managed global UI state with Redux Toolkit covering dark/light mode, active filters, and theme persistence.",
+      "Designed a utility-first Tailwind CSS layout with smooth scroll-triggered micro-animations.",
     ],
     links: [
       [{ label: "Live Demo", href: "https://hunting-coders.netlify.app/", icon: "fa-globe" }],
@@ -241,10 +235,10 @@ export const projects = [
     title: "Weather Forecasting Application",
     tech: "JavaScript (ES6+) • HTML5 • CSS3 • OpenWeather API • Geolocation API • Chart.js",
     bullets: [
-      "Built a responsive real-time weather tracking application with seamless third-party API integration.",
-      "Integrated Chart.js for interactive data visualization showing weather trends, hourly metrics, and 7-day temperature forecasts.",
-      "Implemented location-based forecasting using the browser Geolocation API for immediate local data loading.",
-      "Handled asynchronous operations and API error handling state transitions with vanilla JavaScript.",
+      "Built a real-time weather app integrating OpenWeather API with current conditions, hourly metrics, and 7-day forecasts.",
+      "Visualized weather trends with Chart.js — temperature curves, humidity bars, and wind charts rendered dynamically.",
+      "Auto-detected user location via the Geolocation API for immediate local forecast loading on page open.",
+      "Managed async API calls, loading states, and error boundaries in vanilla ES6+ JavaScript without any framework.",
     ],
     links: [
       [{ label: "Live Demo", href: "https://vaishaleesingh.github.io/WeatherForecast/", icon: "fa-globe" }],
@@ -253,13 +247,13 @@ export const projects = [
   },
   {
     title: "TextForge: Text Utility & Analyzer Web Application",
-    tech: "React 19 • Bootstrap 5 • Intersection Observer API • Web File API • LocalStorage",
+    tech: "React.js • Bootstrap 5 • Intersection Observer API • Web File API • LocalStorage",
     bullets: [
-      "Developed a real-time text analysis tool utilizing React 19 for instant data transformations and stats generation.",
-      "Created advanced processing features including word/character counters, reading speed calculators, and word frequency analysis.",
-      "Implemented 7+ text manipulation features (capitalization, regex replacement, white-space cleaning, etc.) with custom theme configurations persisted in LocalStorage.",
-      "Programmed smooth scroll-based animations using the Intersection Observer API for high visual polish.",
-      "Built responsive CSS layouts using Bootstrap 5, grid layers, and Flexbox.",
+      "Built a real-time text analysis tool in React.js delivering instant word/character counts, reading-speed estimates, and word-frequency breakdowns.",
+      "Implemented 7+ text manipulation features — capitalization, regex find-and-replace, whitespace cleaning, and more — with theme preferences persisted via LocalStorage.",
+      "Integrated the Web File API for direct .txt file upload, feeding content into the analysis pipeline without page reload.",
+      "Wired scroll-triggered entrance animations via the Intersection Observer API for smooth, high-polish UI transitions.",
+      "Built a responsive layout with Bootstrap 5 grid and Flexbox, adapting cleanly across desktop and mobile viewports.",
     ],
     links: [
       [{ label: "Live Demo", href: "https://dreamy-kulfi-20d862.netlify.app/", icon: "fa-globe" }],
@@ -268,13 +262,13 @@ export const projects = [
   },
   {
     title: "NewsMonkey: Real-Time News Aggregation Platform",
-    tech: "React 19 • NewsAPI • GNews API • React Router • Bootstrap 5",
+    tech: "React.js • NewsAPI • GNews API • React Router • Bootstrap 5",
     bullets: [
-      "Engineered a news aggregation platform integrating NewsAPI and GNews API to fetch real-time articles across 7+ categories.",
-      "Developed a high-performance infinite scroll pagination mechanism using the Intersection Observer API.",
-      "Optimized component rendering cycles and callback references using React hooks (useCallback, useMemo) to prevent unnecessary re-renders.",
-      "Designed a premium glassmorphic interface with modern CSS3 animations, backdrop filters, and a dark/light mode switcher.",
-      "Implemented multi-route single-page navigation using React Router for clean route transitions.",
+      "Aggregated real-time articles from NewsAPI and GNews API across 7+ categories with client-side filtering and search.",
+      "Built infinite-scroll pagination using the Intersection Observer API, fetching the next page automatically on scroll.",
+      "Optimized rendering with useCallback and useMemo to eliminate unnecessary re-renders across category and search state changes.",
+      "Styled with CSS3 glassmorphism, backdrop filters, and a dark/light mode switcher for a polished UI.",
+      "Implemented multi-route SPA navigation with React Router for seamless category switching without page reloads.",
     ],
     links: [
       [{ label: "Live Demo", href: "https://news-monkey1.netlify.app/", icon: "fa-globe" }],
