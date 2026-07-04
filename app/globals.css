@@ -2440,3 +2440,16 @@ width: 100%;
 
 .contact-links .contact-link-btn {
 display: inline-flex 
+}
+
+/* Additional Info — collapse top gap on small screens */
+@media (max-width: 639px) {
+  #additional-info {
+    padding-top: 0 !important;
+  }
+}
+@media (min-width: 640px) and (max-width: 767px) {
+  #additional-info {
+    padding-top: 1rem !important;
+  }
+}
