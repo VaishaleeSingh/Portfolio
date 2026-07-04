@@ -18,7 +18,7 @@ export default function FadeInSection({
   return (
     <motion.section
       id={id}
-      className={`section mx-auto w-full max-w-7xl scroll-mt-28 px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-14 xl:py-16 ${className}`}
+      className={`section mx-auto w-full max-w-7xl scroll-mt-28 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-14 xl:py-16 ${className}`}
       initial={{ opacity: 0, y: 48 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15, margin: "-60px" }}
