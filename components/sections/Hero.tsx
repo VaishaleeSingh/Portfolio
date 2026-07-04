@@ -23,7 +23,7 @@ const heroItem = (delay: number) => ({
 export default function Hero() {
   return (
     <section
-      className="hero relative flex w-full scroll-mt-24 items-center justify-center px-6 pb-10 pt-28 sm:px-8 sm:pb-12 sm:pt-32 md:px-10 md:pb-14 lg:px-12 xl:px-14"
+      className="hero relative flex w-full scroll-mt-24 items-center justify-center px-6 pb-8 pt-28 sm:px-8 sm:pb-10 sm:pt-32 md:px-10 md:pb-12 lg:px-12 xl:px-14"
       id="home"
     >
       <div className="hero-layout flex w-full flex-col items-center justify-center gap-7 text-center sm:gap-8 md:gap-10">
@@ -74,4 +74,4 @@ export default function Hero() {
             View Projects
           </ActionLink>
           <ActionLink variant="secondary" size="md" href="#contact" icon="fas fa-envelope" className="cta-btn">
-     
+      
