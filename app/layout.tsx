@@ -17,14 +17,22 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Vaishalee Singh - Portfolio",
   description:
-    "Software Developer portfolio showcasing full-stack development, AI-powered systems, and production-ready projects.",
+    "Portfolio spanning Data Engineering, AI Engineering, Generative AI, and full-stack development, with ETL/ELT pipelines, RAG systems, streaming architecture, cloud data services, and production projects.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${outfit.variable} scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${plusJakarta.variable} ${outfit.variable} scroll-smooth`}
+    >
       <head>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          rel="stylesheet"
+        />
       </head>
       <body className="min-h-screen overflow-x-hidden bg-transparent font-sans text-text-primary antialiased">
         {children}

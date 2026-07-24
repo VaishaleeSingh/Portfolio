@@ -14,8 +14,10 @@ const TOPIC_ICONS: Record<AvatarTopic, string> = {
 };
 
 export default function PortfolioSpeaker() {
-  const { currentTopic, speechText, isSpeaking, speakTopic, stopSpeech } = useAvatarSpeech();
-  const activeLabel = AVATAR_TOPIC_LABELS.find((t) => t.id === currentTopic)?.label ?? "About Me";
+  const { currentTopic, speechText, isSpeaking, speakTopic, stopSpeech } =
+    useAvatarSpeech();
+  const activeLabel =
+    AVATAR_TOPIC_LABELS.find((t) => t.id === currentTopic)?.label ?? "About Me";
 
   return (
     <motion.div
@@ -32,10 +34,16 @@ export default function PortfolioSpeaker() {
         <div className="flex w-full max-w-[11rem] shrink-0 flex-col items-center gap-3">
           <motion.div
             className={`speaker-portrait relative mx-auto aspect-[4/5] w-full overflow-hidden rounded-2xl border-4 bg-cream shadow-lg ${
-              isSpeaking ? "border-aqua shadow-[0_0_28px_rgba(0,180,216,0.35)]" : "border-aqua/30"
+              isSpeaking
+                ? "border-aqua shadow-[0_0_28px_rgba(0,180,216,0.35)]"
+                : "border-aqua/30"
             }`}
             animate={isSpeaking ? { scale: [1, 1.02, 1] } : { scale: 1 }}
-            transition={{ duration: 1.2, repeat: isSpeaking ? Infinity : 0, ease: "easeInOut" }}
+            transition={{
+              duration: 1.2,
+              repeat: isSpeaking ? Infinity : 0,
+              ease: "easeInOut",
+            }}
           >
             <Image
               alt="Vaishalee Singh"
@@ -76,7 +84,7 @@ export default function PortfolioSpeaker() {
 
           <div>
             <p className="text-sm font-bold text-aqua-dark">Vaishalee Singh</p>
-            <p className="text-xs text-text-secondary">Software Developer</p>
+            <p className="text-xs text-text-secondary">Engineering Portfolio</p>
           </div>
         </div>
 
@@ -84,9 +92,12 @@ export default function PortfolioSpeaker() {
         <div className="flex w-full min-w-0 max-w-xl flex-col items-center gap-4 lg:max-w-lg">
           <div className="flex w-full flex-col items-center gap-3">
             <div className="min-w-0">
-              <h2 className="text-lg font-bold text-aqua-dark sm:text-xl">Hear my story</h2>
+              <h2 className="text-lg font-bold text-aqua-dark sm:text-xl">
+                Hear my story
+              </h2>
               <p className="mt-0.5 text-sm text-text-secondary">
-                Tap a topic or press play — I&apos;ll narrate my portfolio for you.
+                Tap a topic or press play - I&apos;ll narrate my portfolio for
+                you.
               </p>
             </div>
 
@@ -94,7 +105,10 @@ export default function PortfolioSpeaker() {
               <motion.span
                 className={`inline-flex h-2 w-2 shrink-0 rounded-full ${isSpeaking ? "bg-aqua" : "bg-aqua/40"}`}
                 animate={isSpeaking ? { scale: [1, 1.4, 1] } : {}}
-                transition={{ duration: 0.9, repeat: isSpeaking ? Infinity : 0 }}
+                transition={{
+                  duration: 0.9,
+                  repeat: isSpeaking ? Infinity : 0,
+                }}
               />
               <span className="text-xs font-semibold text-aqua-dark">
                 {isSpeaking ? "Speaking" : "Ready"}
@@ -112,7 +126,12 @@ export default function PortfolioSpeaker() {
             >
               Listen
             </ActionButton>
-            <ActionButton variant="secondary" size="md" icon="fas fa-stop" onClick={stopSpeech}>
+            <ActionButton
+              variant="secondary"
+              size="md"
+              icon="fas fa-stop"
+              onClick={stopSpeech}
+            >
               Stop
             </ActionButton>
           </div>
@@ -151,7 +170,12 @@ export default function PortfolioSpeaker() {
 
             <p className="speaker-transcript-body text-sm leading-relaxed text-text-primary sm:text-[0.95rem]">
               {speechText}
-              {isSpeaking && <span className="speaker-cursor ml-0.5 inline-block" aria-hidden />}
+              {isSpeaking && (
+                <span
+                  className="speaker-cursor ml-0.5 inline-block"
+                  aria-hidden
+                />
+              )}
             </p>
           </div>
         </div>

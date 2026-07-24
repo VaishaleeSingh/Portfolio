@@ -16,10 +16,19 @@ export default function About() {
           whileHover={{ scale: 1.05, rotate: 1 }}
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
         >
-          <Image alt="Vaishalee Singh - AI Engineer & Full-Stack Developer" src="/Vaishalee.jpeg" width={250} height={250} loading="lazy" className="h-full w-full rounded-full object-cover object-[50%_20%]" />
+          <Image
+            alt="Vaishalee Singh profile portrait"
+            src="/Vaishalee.jpeg"
+            width={250}
+            height={250}
+            loading="lazy"
+            className="h-full w-full rounded-full object-cover object-[50%_20%]"
+          />
         </motion.div>
         <div className="about-text text-center md:text-left">
-          <h3 className="mb-4 text-2xl font-bold text-aqua-dark sm:text-3xl">Hello! I&apos;m Vaishalee Singh</h3>
+          <h3 className="mb-4 text-2xl font-bold text-aqua-dark sm:text-3xl">
+            Hello! I&apos;m Vaishalee Singh
+          </h3>
           {aboutParagraphs.map((paragraph, index) => (
             <motion.p
               key={paragraph.slice(0, 48)}
@@ -33,4 +42,7 @@ export default function About() {
             </motion.p>
           ))}
         </div>
- 
+      </div>
+    </FadeInSection>
+  );
+}

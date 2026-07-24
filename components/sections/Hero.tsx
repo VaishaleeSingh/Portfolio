@@ -4,12 +4,15 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ActionLink } from "@/components/ui/ActionButton";
 
-const PortfolioSpeaker = dynamic(() => import("@/components/avatar/PortfolioSpeaker"), {
-  ssr: false,
-  loading: () => (
-    <div className="h-80 w-full animate-pulse rounded-3xl border border-aqua/20 bg-cream-deep/60 sm:h-96" />
-  ),
-});
+const PortfolioSpeaker = dynamic(
+  () => import("@/components/avatar/PortfolioSpeaker"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-80 w-full animate-pulse rounded-3xl border border-aqua/20 bg-cream-deep/60 sm:h-96" />
+    ),
+  },
+);
 
 const heroItem = (delay: number) => ({
   hidden: { opacity: 0, y: 28 },
@@ -34,7 +37,7 @@ export default function Hero() {
           variants={heroItem(0.15)}
         >
           <i className="fas fa-robot" />
-          AI Engineer · Full-Stack Developer
+          Engineering Portfolio
         </motion.div>
 
         <motion.h1
@@ -52,7 +55,12 @@ export default function Hero() {
           animate="show"
           variants={heroItem(0.39)}
         >
-          Building production-grade <strong>Generative AI systems</strong> — multi-agent platforms, RAG pipelines &amp; LLM applications — with Python, FastAPI, LangChain, LangGraph, React.js &amp; Next.js
+          Building across{" "}
+          <strong>
+            Data Engineering, AI Engineering, GenAI, and full-stack development
+          </strong>{" "}
+          through scalable pipelines, event-driven systems, RAG workflows,
+          LLM-powered applications, and production web platforms.
         </motion.p>
 
         <motion.div
@@ -70,8 +78,26 @@ export default function Hero() {
           animate="show"
           variants={heroItem(0.57)}
         >
-          <ActionLink variant="primary" size="md" href="#projects" icon="fas fa-code" className="cta-btn">
+          <ActionLink
+            variant="primary"
+            size="md"
+            href="#projects"
+            icon="fas fa-code"
+            className="cta-btn"
+          >
             View Projects
           </ActionLink>
-          <ActionLink variant="secondary" size="md" href="#contact" icon="fas fa-envelope" className="cta-btn">
-      
+          <ActionLink
+            variant="secondary"
+            size="md"
+            href="#contact"
+            icon="fas fa-envelope"
+            className="cta-btn"
+          >
+            Get In Touch
+          </ActionLink>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

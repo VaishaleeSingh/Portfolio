@@ -7,7 +7,7 @@ import { additionalInfo } from "@/data/portfolio";
 export default function AdditionalInfo() {
   return (
     <FadeInSection id="additional-info" className="!pt-0 sm:!pt-4 md:!pt-8">
-      <SectionTitle>Additional Information</SectionTitle>
+      <SectionTitle>Key Strengths</SectionTitle>
       <MotionGrid className="projects-grid grid-info grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {additionalInfo.map((item) => (
           <MotionGridItem key={item.title}>
@@ -23,4 +23,7 @@ export default function AdditionalInfo() {
             </ProjectCard>
           </MotionGridItem>
         ))}
-      </Moti
+      </MotionGrid>
+    </FadeInSection>
+  );
+}

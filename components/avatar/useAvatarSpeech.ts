@@ -6,11 +6,13 @@ import { AVATAR_TOPICS, type AvatarTopic } from "@/config/avatar";
 export function useAvatarSpeech() {
   const [currentTopic, setCurrentTopic] = useState<AvatarTopic>("intro");
   const [speechText, setSpeechText] = useState(
-    'Hi! I\'m Vaishalee. Click "Listen to Me" and I\'ll walk you through my expertise, experience, and projects.'
+    "Hi! I'm Vaishalee. Click \"Listen\" and I'll walk you through my data engineering, AI, experience, and projects.",
   );
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  const typewriterTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const typewriterTimerRef = useRef<ReturnType<typeof setInterval> | null>(
+    null,
+  );
 
   const typewriteText = useCallback((text: string) => {
     if (typewriterTimerRef.current) clearInterval(typewriterTimerRef.current);
@@ -57,8 +59,14 @@ export function useAvatarSpeech() {
 
       const voices = window.speechSynthesis.getVoices();
       const preferred =
-        voices.find((v) => v.lang.startsWith("en") && (v.name.includes("Female") || v.name.includes("Samantha") || v.name.includes("Zira") || v.name.includes("Google"))) ||
-        voices.find((v) => v.lang.startsWith("en"));
+        voices.find(
+          (v) =>
+            v.lang.startsWith("en") &&
+            (v.name.includes("Female") ||
+              v.name.includes("Samantha") ||
+              v.name.includes("Zira") ||
+              v.name.includes("Google")),
+        ) || voices.find((v) => v.lang.startsWith("en"));
       if (preferred) utterance.voice = preferred;
 
       utterance.onstart = () => setIsSpeaking(true);
@@ -67,12 +75,13 @@ export function useAvatarSpeech() {
 
       window.speechSynthesis.speak(utterance);
     },
-    [stopSpeech, typewriteText]
+    [stopSpeech, typewriteText],
   );
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.speechSynthesis) {
-      window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+      window.speechSynthesis.onvoiceschanged = () =>
+        window.speechSynthesis.getVoices();
     }
   }, []);
 
