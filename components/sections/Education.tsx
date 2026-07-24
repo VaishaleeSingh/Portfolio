@@ -10,7 +10,7 @@ export default function Education() {
     <FadeInSection id="education">
       <SectionTitle>Education &amp; Certifications</SectionTitle>
       <SubsectionTitle>Education</SubsectionTitle>
-      <MotionGrid className="projects-grid grid-education mb-5 grid grid-cols-1 gap-5 sm:mb-6 sm:grid-cols-2 xl:grid-cols-3">
+      <MotionGrid className="projects-grid grid-education mb-10 grid grid-cols-1 gap-6 sm:mb-12 sm:grid-cols-2 sm:gap-7 xl:grid-cols-3 xl:gap-8">
         {education.map((item) => (
           <MotionGridItem key={item.title}>
             <ProjectCard title={item.title} subtitle={item.subtitle}>
@@ -21,7 +21,8 @@ export default function Education() {
               </p>
               {item.extra ? (
                 <p className="card-note">
-                  <strong>Relevant Coursework:</strong> {item.extra.replace("Relevant Coursework:", "").trim()}
+                  <strong>Relevant Coursework:</strong>{" "}
+                  {item.extra.replace("Relevant Coursework:", "").trim()}
                 </p>
               ) : null}
             </ProjectCard>
@@ -29,7 +30,7 @@ export default function Education() {
         ))}
       </MotionGrid>
       <SubsectionTitle>Certifications</SubsectionTitle>
-      <MotionGrid className="projects-grid grid-education grid grid-cols-1 gap-5 sm:grid-cols-2">
+      <MotionGrid className="projects-grid grid-education grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 xl:gap-8">
         {certifications.map((cert) => (
           <MotionGridItem key={cert.title}>
             <ProjectCard title={cert.title} subtitle={cert.subtitle}>

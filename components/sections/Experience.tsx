@@ -9,11 +9,17 @@ export default function Experience() {
   return (
     <FadeInSection id="experience">
       <SectionTitle>Experience</SectionTitle>
-      <MotionGrid className="projects-grid grid-single grid grid-cols-1 gap-5 md:gap-6">
+      <MotionGrid className="projects-grid grid-single grid grid-cols-1 gap-6 md:gap-8">
         {experiences.map((exp) => (
           <MotionGridItem key={`${exp.company}-${exp.period}`}>
-            <ProjectCard title={exp.role} subtitle={`${exp.company} | ${exp.period}`}>
-              <BulletList items={exp.bullets} className="content-list experience-list" />
+            <ProjectCard
+              title={exp.role}
+              subtitle={`${exp.company} | ${exp.period}`}
+            >
+              <BulletList
+                items={exp.bullets}
+                className="content-list experience-list"
+              />
             </ProjectCard>
           </MotionGridItem>
         ))}

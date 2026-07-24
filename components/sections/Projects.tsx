@@ -10,11 +10,14 @@ export default function Projects() {
   return (
     <FadeInSection id="projects">
       <SectionTitle>Featured Projects</SectionTitle>
-      <MotionGrid className="projects-grid grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 xl:gap-8">
+      <MotionGrid className="projects-grid grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:gap-10">
         {projects.map((project) => (
           <MotionGridItem key={project.title} className="h-full">
             <ProjectCard title={project.title} subtitle={project.tech}>
-              <BulletList items={project.bullets} className="content-list project-list" />
+              <BulletList
+                items={project.bullets}
+                className="content-list project-list"
+              />
               <ProjectLinks links={project.links} />
             </ProjectCard>
           </MotionGridItem>
