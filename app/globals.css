@@ -2892,35 +2892,24 @@ nav.scrolled .nav-links a.active {
   letter-spacing: 0.01em;
 }
 
-/* Role-type badges */
+/* Role-type badge — single common style */
 .exp-badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.2rem 0.65rem;
+  padding: 0.25rem 0.9rem;
   border-radius: 999px;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   white-space: nowrap;
-}
-
-.exp-badge--fulltime {
-  background: rgba(0, 180, 216, 0.18);
-  border: 1px solid rgba(0, 180, 216, 0.4);
-  color: #90e0ef;
-}
-
-.exp-badge--training {
-  background: rgba(72, 202, 228, 0.14);
-  border: 1px solid rgba(72, 202, 228, 0.35);
-  color: #caf0f8;
-}
-
-.exp-badge--intern {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: rgba(255, 255, 255, 0.75);
+  background: rgba(0, 180, 216, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #ffffff;
+  box-shadow:
+    0 0 10px rgba(0, 180, 216, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
 }
 
 /* Meta row: company + period */

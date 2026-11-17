@@ -4,19 +4,11 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import MotionGrid, { MotionGridItem } from "@/components/ui/MotionGrid";
 import { experiences } from "@/data/portfolio";
 
-type BadgeType = "full-time" | "training" | "intern";
-
-function getRoleBadge(role: string, company: string): { label: string; type: BadgeType } {
-  if (role.toLowerCase().includes("apprentice")) return { label: "Full-Time", type: "full-time" };
-  if (role.toLowerCase().includes("trainee") || role.toLowerCase().includes("thinkschool")) return { label: "Training Program", type: "training" };
-  return { label: "Internship", type: "intern" };
+function getRoleBadgeLabel(role: string): string {
+  if (role.toLowerCase().includes("apprentice")) return "Full-Time";
+  if (role.toLowerCase().includes("trainee") || role.toLowerCase().includes("thinkschool")) return "Training Program";
+  return "Internship";
 }
-
-const badgeStyles: Record<BadgeType, string> = {
-  "full-time": "exp-badge exp-badge--fulltime",
-  "training":  "exp-badge exp-badge--training",
-  "intern":    "exp-badge exp-badge--intern",
-};
 
 export default function Experience() {
   return (
@@ -24,7 +16,7 @@ export default function Experience() {
       <SectionTitle>Experience</SectionTitle>
       <MotionGrid className="projects-grid grid-single grid grid-cols-1 gap-6 md:gap-8">
         {experiences.map((exp) => {
-          const badge = getRoleBadge(exp.role, exp.company);
+          const badgeLabel = getRoleBadgeLabel(exp.role);
           const isThinkbridge = exp.company === "thinkbridge";
           return (
             <MotionGridItem key={`${exp.company}-${exp.period}`}>
@@ -33,7 +25,7 @@ export default function Experience() {
                   <div className="exp-header-top">
                     <div className="exp-title-group">
                       <h3 className="exp-role">{exp.role}</h3>
-                      <span className={badgeStyles[badge.type]}>{badge.label}</span>
+                      <span className="exp-badge">{badgeLabel}</span>
                     </div>
                     <div className="exp-meta">
                       <span className="exp-company">
