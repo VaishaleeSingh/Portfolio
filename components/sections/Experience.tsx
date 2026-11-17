@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FadeInSection from "@/components/layout/FadeInSection";
 import BulletList from "@/components/ui/BulletList";
 import SectionTitle from "@/components/ui/SectionTitle";
@@ -29,7 +30,17 @@ export default function Experience() {
                     </div>
                     <div className="exp-meta">
                       <span className="exp-company">
-                        {isThinkbridge && <i className="fas fa-building exp-company-icon" />}
+                        {exp.logo && (
+                          <span className="exp-company-logo">
+                            <Image
+                              src={exp.logo}
+                              alt={`${exp.company} logo`}
+                              width={28}
+                              height={28}
+                              className="exp-logo-img"
+                            />
+                          </span>
+                        )}
                         {exp.company}
                       </span>
                       <span className="exp-period">

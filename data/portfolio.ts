@@ -1,3 +1,8 @@
+import type { StaticImageData } from "next/image";
+import rapidInnovationLogo from "@/public/rapid_innovation.png";
+import thinkbridgeNowLogo from "@/public/thinkbridgenow_logo.jpg";
+import takeUforwardLogo from "@/public/takeUforwardlogo.jpg";
+
 export const navLinks = [
   { href: "#home", icon: "fa-home", label: "Home" },
   { href: "#about", icon: "fa-user", label: "About" },
@@ -36,11 +41,20 @@ export const certifications = [
   },
 ];
 
-export const experiences = [
+type Experience = {
+  role: string;
+  company: string;
+  period: string;
+  logo?: StaticImageData;
+  bullets: string[];
+};
+
+export const experiences: Experience[] = [
   {
     role: "Apprentice Software Engineer",
     company: "thinkbridge",
     period: "Oct 2026 – Present",
+    logo: thinkbridgeNowLogo,
     bullets: [
       "Selected for the Apprentice Software Engineer role upon successful completion of the thinkSchool program and all evaluation rounds.",
       "Develop and maintain application features using C#, ASP.NET Core, and Angular in adherence to established engineering and production-readiness standards.",
@@ -51,6 +65,7 @@ export const experiences = [
     role: "Software Engineering Trainee (thinkSchool Program)",
     company: "thinkbridge",
     period: "Aug 2026 – Sep 2026",
+    logo: thinkbridgeNowLogo,
     bullets: [
       "Gained hands-on proficiency in backend engineering with C# and ASP.NET Core, including RESTful API design, layered architecture, and data access patterns.",
       "Developed responsive frontend applications in Angular, applying component-based design, services, routing, and API integration.",
@@ -60,8 +75,9 @@ export const experiences = [
   },
   {
     role: "Software Developer Intern",
-    company: "Take U Forward",
-    period: "Jun 2026 – Present",
+    company: "takeUforward",
+    period: "Jun 2026 – Aug 2026",
+    logo: takeUforwardLogo,
     bullets: [
       "Build and maintain production-scale apps in React.js, Next.js, TypeScript, and Node.js on a modular, component-driven architecture.",
       "Integrate LLM-powered features into product surfaces — prompt-engineered flows and API-backed AI assistance — to enhance functionality.",
@@ -73,6 +89,7 @@ export const experiences = [
     role: "Software Developer Intern",
     company: "Rapid Innovation (RUH AI)",
     period: "Nov 2025 – May 2026",
+    logo: rapidInnovationLogo,
     bullets: [
       "Built production Generative AI systems — RAG pipelines and multi-agent platforms — using Python, FastAPI, LangChain, and LangGraph to orchestrate autonomous agent workflows.",
       "Engineered semantic search over vector databases with tuned retrieval, chunking, and embedding strategies for accurate, low-latency LLM responses.",

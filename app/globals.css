@@ -2934,6 +2934,23 @@ nav.scrolled .nav-links a.active {
   color: rgba(72, 202, 228, 0.8);
 }
 
+/* Circular company logo */
+.exp-company-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.exp-logo-img {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 180, 216, 0.3);
+}
+
 .exp-period {
   display: inline-flex;
   align-items: center;
