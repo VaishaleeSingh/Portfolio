@@ -55,12 +55,11 @@ export default function Hero() {
           animate="show"
           variants={heroItem(0.39)}
         >
-          Building across{" "}
-          <strong>
-            Data Engineering, AI Engineering, GenAI, and full-stack development
-          </strong>{" "}
-          through scalable pipelines, event-driven systems, RAG workflows,
-          LLM-powered applications, and production web platforms.
+          Apprentice Software Engineer at{" "}
+          <strong>thinkbridge</strong> — building production applications with{" "}
+          <strong>C#, ASP.NET Core, Angular</strong> and shipping{" "}
+          <strong>GenAI systems, RAG pipelines, and full-stack features</strong>{" "}
+          across React.js, Next.js, FastAPI, and cloud platforms.
         </motion.p>
 
         <motion.div
